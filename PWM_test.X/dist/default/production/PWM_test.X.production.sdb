@@ -1,0 +1,124 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F88 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"24 D:\PROGRAMMATION\MPLAB X\PWM_test.X\main.c
+[v _my_ISR my_ISR `II(v  1 e 1 0 ]
+"33
+[v _main main `(v  1 e 1 0 ]
+"10 D:\PROGRAMMATION\MPLAB X\PWM_test.X\my_PWM_16F88.h
+[v _PWM_init PWM_init `(v  1 e 1 0 ]
+"34
+[v _PWM_set_duty PWM_set_duty `(v  1 e 1 0 ]
+"42
+[v _PWM_start PWM_start `(v  1 e 1 0 ]
+"47
+[v _PWM_stop PWM_stop `(v  1 e 1 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f88.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"219
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"553
+[v _TMR2 TMR2 `VEuc  1 e 1 @17 ]
+"710
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"1116
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1425
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2127
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
+"2129
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
+"2131
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2133
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2193
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2239
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"2241
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"2243
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"2245
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"2265
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2341
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"2355
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2357
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2359
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2361
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2375
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"22 D:\PROGRAMMATION\MPLAB X\PWM_test.X\main.c
+[v _count count `uc  1 e 1 0 ]
+"33
+[v _main main `(v  1 e 1 0 ]
+{
+"47
+[v main@duty_c duty_c `s  1 a 2 12 ]
+"64
+} 0
+"47 D:\PROGRAMMATION\MPLAB X\PWM_test.X\my_PWM_16F88.h
+[v _PWM_stop PWM_stop `(v  1 e 1 0 ]
+{
+"50
+} 0
+"42
+[v _PWM_start PWM_start `(v  1 e 1 0 ]
+{
+"45
+} 0
+"34
+[v _PWM_set_duty PWM_set_duty `(v  1 e 1 0 ]
+{
+[v PWM_set_duty@duty_c duty_c `s  1 p 2 8 ]
+"40
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"10 D:\PROGRAMMATION\MPLAB X\PWM_test.X\my_PWM_16F88.h
+[v _PWM_init PWM_init `(v  1 e 1 0 ]
+{
+[v PWM_init@pr2_val pr2_val `uc  1 a 1 wreg ]
+[v PWM_init@pr2_val pr2_val `uc  1 a 1 wreg ]
+[v PWM_init@tmr2_prescal tmr2_prescal `uc  1 p 1 5 ]
+"15
+[v PWM_init@pr2_val pr2_val `uc  1 a 1 6 ]
+"32
+} 0
+"24 D:\PROGRAMMATION\MPLAB X\PWM_test.X\main.c
+[v _my_ISR my_ISR `II(v  1 e 1 0 ]
+{
+"31
+} 0
