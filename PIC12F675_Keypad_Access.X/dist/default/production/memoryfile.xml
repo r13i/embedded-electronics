@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\PIC12F675_Keypad_Access.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>1024</length>
+      <used>980</used>
+      <free>44</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>64</length>
+      <used>28</used>
+      <free>36</free>
+    </memory>
+  </executable>
+</project>
