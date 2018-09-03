@@ -1,0 +1,112 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F88 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"33 D:\PROGRAMMATION\MPLAB X\Stopwatch_60_min.X\main.c
+[v _seg_disp seg_disp `(v  1 e 1 0 ]
+"45
+[v _digit_disp digit_disp `(v  1 e 1 0 ]
+"90
+[v _my_ISR my_ISR `II(v  1 e 1 0 ]
+"101
+[v _main main `(v  1 e 1 0 ]
+"158 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f88.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"219
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"299
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"986
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1055
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1116
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1691
+[v _ANSEL ANSEL `VEuc  1 e 1 @155 ]
+"2247
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"2249
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2251
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2253
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2359
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2361
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"31 D:\PROGRAMMATION\MPLAB X\Stopwatch_60_min.X\main.c
+[v _count count `uc  1 e 1 0 ]
+"101
+[v _main main `(v  1 e 1 0 ]
+{
+"115
+} 0
+"90
+[v _my_ISR my_ISR `II(v  1 e 1 0 ]
+{
+"99
+} 0
+"45
+[v _digit_disp digit_disp `(v  1 e 1 0 ]
+{
+"47
+[v digit_disp@i i `uc  1 s 1 i ]
+"48
+[v digit_disp@SS SS `uc  1 s 1 SS ]
+"49
+[v digit_disp@MM MM `uc  1 s 1 MM ]
+"88
+} 0
+"33
+[v _seg_disp seg_disp `(v  1 e 1 0 ]
+{
+[v seg_disp@N N `uc  1 a 1 wreg ]
+"37
+[v seg_disp@seg seg `[16]uc  1 a 16 0 ]
+"33
+[v seg_disp@N N `uc  1 a 1 wreg ]
+"34
+[v seg_disp@F985 F985 `[16]uc  1 s 16 F985 ]
+"39
+[v seg_disp@N N `uc  1 a 1 16 ]
+"43
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
