@@ -1,0 +1,428 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\USER\AppData\Local\Temp\s3d0.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 11 11 2 2
+config CONFIG 0 2007 2007 2 2
+$dist/default/production\Digital_Clock_HH_MM.X.production.obj
+cinit CODE 0 13 13 13 2
+text1 CODE 0 18A 18A 18 2
+text2 CODE 0 26 26 A2 2
+text3 CODE 0 16C 16C 1E 2
+text4 CODE 0 121 121 4B 2
+text5 CODE 0 C8 C8 59 2
+maintext CODE 0 1A2 1A2 12 2
+cstackCOMMON COMMON 1 70 70 B 1
+cstackBANK0 BANK0 1 20 20 16 1
+inittext CODE 0 1C4 1C4 10 2
+intentry CODE 0 4 4 D 2
+bssBANK0 BANK0 1 46 46 5 1
+idataBANK0 CODE 0 1B4 1B4 10 2
+dataBANK0 BANK0 1 36 36 10 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4B-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 4B-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 2-3 2
+CONST 1D4-FFF 2
+ENTRY 2-3 2
+ENTRY 1D4-FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 2-3 2
+CODE 1D4-FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7B-7D 1
+EEDATA 2100-21FF 2
+STRCODE 2-3 2
+STRCODE 1D4-FFF 2
+STRING 2-3 2
+STRING 1D4-FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Digital_Clock_HH_MM.X.production.obj
+13 cinit CODE >225:C:\Users\USER\AppData\Local\Temp\s3d0.
+13 cinit CODE >228:C:\Users\USER\AppData\Local\Temp\s3d0.
+13 cinit CODE >287:C:\Users\USER\AppData\Local\Temp\s3d0.
+14 cinit CODE >288:C:\Users\USER\AppData\Local\Temp\s3d0.
+15 cinit CODE >289:C:\Users\USER\AppData\Local\Temp\s3d0.
+16 cinit CODE >290:C:\Users\USER\AppData\Local\Temp\s3d0.
+17 cinit CODE >291:C:\Users\USER\AppData\Local\Temp\s3d0.
+18 cinit CODE >292:C:\Users\USER\AppData\Local\Temp\s3d0.
+19 cinit CODE >293:C:\Users\USER\AppData\Local\Temp\s3d0.
+1A cinit CODE >294:C:\Users\USER\AppData\Local\Temp\s3d0.
+1B cinit CODE >295:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C cinit CODE >296:C:\Users\USER\AppData\Local\Temp\s3d0.
+1E cinit CODE >300:C:\Users\USER\AppData\Local\Temp\s3d0.
+1F cinit CODE >301:C:\Users\USER\AppData\Local\Temp\s3d0.
+20 cinit CODE >302:C:\Users\USER\AppData\Local\Temp\s3d0.
+21 cinit CODE >303:C:\Users\USER\AppData\Local\Temp\s3d0.
+22 cinit CODE >304:C:\Users\USER\AppData\Local\Temp\s3d0.
+23 cinit CODE >310:C:\Users\USER\AppData\Local\Temp\s3d0.
+23 cinit CODE >312:C:\Users\USER\AppData\Local\Temp\s3d0.
+24 cinit CODE >313:C:\Users\USER\AppData\Local\Temp\s3d0.
+4 intentry CODE >94:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+C8 text5 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+C8 text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+C9 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+CB text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+D0 text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+D2 text5 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+D4 text5 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+D9 text5 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+DD text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+DF text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+E3 text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+E5 text5 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+E7 text5 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+EE text5 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+F2 text5 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+F3 text5 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+FA text5 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+102 text5 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+108 text5 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+109 text5 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+110 text5 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+114 text5 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+117 text5 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+11C text5 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+121 text4 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+121 text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+122 text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+124 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+129 text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+12B text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+12D text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+132 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+136 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+138 text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+13A text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+141 text4 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+145 text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+146 text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+14E text4 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+154 text4 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+15B text4 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+15F text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+162 text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+167 text4 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+16C text3 CODE >32:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+16F text3 CODE >38:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+184 text3 CODE >41:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+189 text3 CODE >42:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+26 text2 CODE >44:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+26 text2 CODE >51:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+2C text2 CODE >53:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+30 text2 CODE >54:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+31 text2 CODE >56:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+3A text2 CODE >57:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+43 text2 CODE >58:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+47 text2 CODE >61:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+4A text2 CODE >63:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+4B text2 CODE >64:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+4E text2 CODE >65:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+5F text2 CODE >66:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+63 text2 CODE >67:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+64 text2 CODE >68:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+67 text2 CODE >70:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+68 text2 CODE >71:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+6B text2 CODE >72:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+7C text2 CODE >73:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+82 text2 CODE >74:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+83 text2 CODE >75:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+87 text2 CODE >77:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+88 text2 CODE >78:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+8B text2 CODE >79:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+9D text2 CODE >81:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+AA text2 CODE >83:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+AE text2 CODE >84:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+AF text2 CODE >85:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+AF text2 CODE >87:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+B0 text2 CODE >88:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+B3 text2 CODE >89:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+C4 text2 CODE >90:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+C7 text2 CODE >91:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+18A text1 CODE >94:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+18A text1 CODE >96:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+18D text1 CODE >98:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+191 text1 CODE >99:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+194 text1 CODE >101:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+195 text1 CODE >103:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1A2 maintext CODE >105:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1A2 maintext CODE >106:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1A5 maintext CODE >107:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1A7 maintext CODE >108:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1AB maintext CODE >109:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1AD maintext CODE >111:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1B1 maintext CODE >112:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1B3 maintext CODE >114:D:\PROGRAMMATION\MPLAB X\Digital_Clock_HH_MM.X\main.c
+1C4 inittext CODE >261:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C4 inittext CODE >262:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C5 inittext CODE >263:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C6 inittext CODE >264:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C7 inittext CODE >265:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C8 inittext CODE >272:C:\Users\USER\AppData\Local\Temp\s3d0.
+1C8 inittext CODE >273:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CA inittext CODE >274:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CB inittext CODE >275:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CC inittext CODE >276:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CD inittext CODE >277:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CE inittext CODE >278:C:\Users\USER\AppData\Local\Temp\s3d0.
+1CF inittext CODE >279:C:\Users\USER\AppData\Local\Temp\s3d0.
+1D0 inittext CODE >280:C:\Users\USER\AppData\Local\Temp\s3d0.
+1D1 inittext CODE >281:C:\Users\USER\AppData\Local\Temp\s3d0.
+1D2 inittext CODE >282:C:\Users\USER\AppData\Local\Temp\s3d0.
+1D3 inittext CODE >283:C:\Users\USER\AppData\Local\Temp\s3d0.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 1 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 2009 0 ABS 0 - -
+__Hspace_1 7B 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\USER\AppData\Local\Temp\s3d0.obj
+_main 344 0 CODE 0 maintext dist/default/production\Digital_Clock_HH_MM.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+start 22 0 CODE 0 init C:\Users\USER\AppData\Local\Temp\s3d0.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+digit_disp@i 4A 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\USER\AppData\Local\Temp\s3d0.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of___awdiv 242 0 CODE 0 text5 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of___awmod 2D8 0 CODE 0 text4 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_INTCON B 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_OPTION_REG 81 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+start_initialization 26 0 CODE 0 cinit dist/default/production\Digital_Clock_HH_MM.X.production.obj
+digit_disp@HH 47 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+digit_disp@MM 48 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+digit_disp@SS 49 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of_my_ISR 344 0 CODE 0 text1 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_TMR0IE 5D 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_TMR0IF 5A 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\USER\AppData\Local\Temp\s3d0.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 4C 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit 26 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 22 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 22 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_digit_disp 4C 0 CODE 0 text2 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RA0 28 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_RA1 29 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_RA2 2A 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_RA3 2B 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_RA4 2C 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__S0 2009 0 ABS 0 - -
+__S1 7B 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+saved_w 7E 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__size_of_seg_disp 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+seg_disp@N 30 0 BANK0 1 cstackBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\USER\AppData\Local\Temp\s3d0.obj
+seg_disp@F985 36 0 BANK0 1 dataBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__pdataBANK0 36 0 BANK0 1 dataBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_my_ISR 314 0 CODE 0 text1 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of_digit_disp 190 0 CODE 0 text2 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awdiv 190 0 CODE 0 text5 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awmod 242 0 CODE 0 text4 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__pmaintext 344 0 CODE 0 maintext dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hinittext 0 0 ABS 0 inittext -
+_seg_disp 2D8 0 CODE 0 text3 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of_seg_disp 314 0 CODE 0 text3 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\USER\AppData\Local\Temp\s3d0.obj
+stacklo 0 0 ABS 0 - C:\Users\USER\AppData\Local\Temp\s3d0.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+init_fetch0 388 0 CODE 0 inittext dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__size_of_my_ISR 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lend_init 22 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 46 0 CODE 0 cinit dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hintentry 22 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+seg_disp@seg 20 0 BANK0 1 cstackBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__ptext1 314 0 CODE 0 text1 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__ptext2 4C 0 CODE 0 text2 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__ptext3 2D8 0 CODE 0 text3 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__ptext4 242 0 CODE 0 text4 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__ptext5 190 0 CODE 0 text5 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of__initialization 46 0 CODE 0 cinit dist/default/production\Digital_Clock_HH_MM.X.production.obj
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__pidataBANK0 368 0 CODE 0 idataBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hend_init 26 0 CODE 0 end_init -
+init_ram0 390 0 CODE 0 inittext dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__end_of_main 368 0 CODE 0 maintext dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_ANSEL 9B 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_PORTA 5 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__size_of_digit_disp 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+_count 46 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__initialization 26 0 CODE 0 cinit dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__pbssBANK0 46 0 BANK0 1 bssBANK0 dist/default/production\Digital_Clock_HH_MM.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Digital_Clock_HH_MM.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackCOMMON 1 70 70 B 1
+cstackBANK0 1 20 20 2B 1
+intentry 0 4 8 1D0 2
+reset_vec 0 0 0 2 2
+config 0 2007 400E 2 2
