@@ -1,0 +1,207 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F88 ]
+[d frameptr 6 ]
+"36 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_inc/ir_rx.h
+[v _IR_GetStateDuration IR_GetStateDuration `(uc  1 e 1 0 ]
+"45
+[v _IR_Demodulate IR_Demodulate `(v  1 e 1 0 ]
+"80
+[v _IR_Detect IR_Detect `(ul  1 e 4 0 ]
+"13 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_src/pwm.c
+[v _PWM_SetPeriod PWM_SetPeriod `(v  1 e 1 0 ]
+"18
+[v _PWM_SetDutyCycle PWM_SetDutyCycle `(v  1 e 1 0 ]
+"32
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+"7 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_src/tmr0.c
+[v _TMR0_SetPrescaler TMR0_SetPrescaler `(v  1 e 1 0 ]
+"11
+[v _TMR0_Init TMR0_Init `(v  1 e 1 0 ]
+"24
+[v _getTMR0 getTMR0 `(uc  1 e 1 0 ]
+"28
+[v _setTMR0 setTMR0 `(v  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"10 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\main.c
+[v _myISR myISR `II(v  1 e 1 0 ]
+"19
+[v _main main `(v  1 e 1 0 ]
+"29 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_inc/ir_rx.h
+[v _RX_status RX_status `uc  1 e 1 0 ]
+"31
+[v _bitCount bitCount `uc  1 e 1 0 ]
+"32
+[v _demodulatedValue demodulatedValue `ul  1 e 4 0 ]
+[s S19 . 8 `ul 1 UP 4 0 `ul 1 DOWN 4 4 ]
+"14 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_inc/protocols.h
+[v _SAMSUNG SAMSUNG `DCCS19  1 e 8 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f88.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"158
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"219
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"710
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"873
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1055
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1116
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1425
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1685
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"1691
+[v _ANSEL ANSEL `VEuc  1 e 1 @155 ]
+"2107
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2127
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
+"2129
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
+"2131
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2133
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2193
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2239
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"2241
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"2243
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"2245
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"2251
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2253
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2269
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2315
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2339
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2341
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"2355
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2357
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2359
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2361
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2375
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"2417
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"2439
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"19 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"38
+[v main@val val `ul  1 a 4 12 ]
+"36
+[v main@dutyCycle dutyCycle `us  1 a 2 16 ]
+"61
+} 0
+"11 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_src/tmr0.c
+[v _TMR0_Init TMR0_Init `(v  1 e 1 0 ]
+{
+"22
+} 0
+"32 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_src/pwm.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+{
+"45
+} 0
+"13
+[v _PWM_SetPeriod PWM_SetPeriod `(v  1 e 1 0 ]
+{
+[v PWM_SetPeriod@period period `uc  1 a 1 wreg ]
+[v PWM_SetPeriod@period period `uc  1 a 1 wreg ]
+[v PWM_SetPeriod@period period `uc  1 a 1 4 ]
+"16
+} 0
+"18
+[v _PWM_SetDutyCycle PWM_SetDutyCycle `(v  1 e 1 0 ]
+{
+[v PWM_SetDutyCycle@dutyCycle dutyCycle `us  1 p 2 4 ]
+"23
+} 0
+"80 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_inc/ir_rx.h
+[v _IR_Detect IR_Detect `(ul  1 e 4 0 ]
+{
+"99
+[v IR_Detect@riseTime_71 riseTime `uc  1 a 1 7 ]
+"98
+[v IR_Detect@fallTime_70 fallTime `uc  1 a 1 6 ]
+"89
+[v IR_Detect@riseTime riseTime `uc  1 a 1 5 ]
+"88
+[v IR_Detect@fallTime fallTime `uc  1 a 1 4 ]
+"113
+} 0
+"36
+[v _IR_GetStateDuration IR_GetStateDuration `(uc  1 e 1 0 ]
+{
+[v IR_GetStateDuration@state state `uc  1 a 1 wreg ]
+[v IR_GetStateDuration@state state `uc  1 a 1 wreg ]
+[v IR_GetStateDuration@state state `uc  1 a 1 5 ]
+"42
+} 0
+"28 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_src/tmr0.c
+[v _setTMR0 setTMR0 `(v  1 e 1 0 ]
+{
+[v setTMR0@value value `uc  1 a 1 wreg ]
+[v setTMR0@value value `uc  1 a 1 wreg ]
+[v setTMR0@value value `uc  1 a 1 4 ]
+"33
+} 0
+"7
+[v _TMR0_SetPrescaler TMR0_SetPrescaler `(v  1 e 1 0 ]
+{
+"9
+} 0
+"24
+[v _getTMR0 getTMR0 `(uc  1 e 1 0 ]
+{
+"26
+} 0
+"45 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\_inc/ir_rx.h
+[v _IR_Demodulate IR_Demodulate `(v  1 e 1 0 ]
+{
+[v IR_Demodulate@fallTime fallTime `uc  1 a 1 wreg ]
+[v IR_Demodulate@fallTime fallTime `uc  1 a 1 wreg ]
+[v IR_Demodulate@riseTime riseTime `uc  1 p 1 4 ]
+"54
+[v IR_Demodulate@fallTime fallTime `uc  1 a 1 6 ]
+"78
+} 0
+"10 D:\PROGRAMMATION\MPLAB X\IR_Receiver.X\main.c
+[v _myISR myISR `II(v  1 e 1 0 ]
+{
+"16
+} 0

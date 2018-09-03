@@ -1,0 +1,1943 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.40 build -251452761 
+                                                                                               Wed Aug 23 11:50:10 2017
+
+Microchip Technology Omniscient Code Generator v1.40 (Free mode) build 201612010151
+     1                           	processor	16F88
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	strings,global,class=STRING,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,merge=1,delta=2
+    13                           	psect	text3,local,class=CODE,merge=1,delta=2
+    14                           	psect	text4,local,class=CODE,merge=1,delta=2
+    15                           	psect	text5,local,class=CODE,merge=1,delta=2
+    16                           	psect	text6,local,class=CODE,merge=1,delta=2
+    17                           	psect	text7,local,class=CODE,merge=1,delta=2
+    18                           	psect	text8,local,class=CODE,merge=1,delta=2
+    19                           	psect	text9,local,class=CODE,merge=1,delta=2
+    20                           	psect	text10,local,class=CODE,merge=1,delta=2
+    21                           	psect	text11,local,class=CODE,merge=1,delta=2
+    22                           	psect	intentry,global,class=CODE,delta=2
+    23                           	dabs	1,0x7E,2
+    24  0000                     
+    25                           ; Version 1.40
+    26                           ; Generated 01/12/2016 GMT
+    27                           ; 
+    28                           ; Copyright © 2016, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    29                           ; All rights reserved.
+    30                           ; 
+    31                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    32                           ; 
+    33                           ; Redistribution and use in source and binary forms, with or without modification, are
+    34                           ; permitted provided that the following conditions are met:
+    35                           ; 
+    36                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    37                           ;        conditions and the following disclaimer.
+    38                           ; 
+    39                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    40                           ;        of conditions and the following disclaimer in the documentation and/or other
+    41                           ;        materials provided with the distribution.
+    42                           ; 
+    43                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    44                           ;        software without specific prior written permission.
+    45                           ; 
+    46                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    47                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    48                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    49                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    50                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    51                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    52                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    53                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    54                           ; 
+    55                           ; 
+    56                           ; Code-generator required, PIC16F88 Definitions
+    57                           ; 
+    58                           ; SFR Addresses
+    59  0000                     	;# 
+    60  0001                     	;# 
+    61  0002                     	;# 
+    62  0003                     	;# 
+    63  0004                     	;# 
+    64  0005                     	;# 
+    65  0006                     	;# 
+    66  000A                     	;# 
+    67  000B                     	;# 
+    68  000C                     	;# 
+    69  000D                     	;# 
+    70  000E                     	;# 
+    71  000E                     	;# 
+    72  000F                     	;# 
+    73  0010                     	;# 
+    74  0011                     	;# 
+    75  0012                     	;# 
+    76  0013                     	;# 
+    77  0014                     	;# 
+    78  0015                     	;# 
+    79  0015                     	;# 
+    80  0016                     	;# 
+    81  0017                     	;# 
+    82  0018                     	;# 
+    83  0019                     	;# 
+    84  001A                     	;# 
+    85  001E                     	;# 
+    86  001F                     	;# 
+    87  0081                     	;# 
+    88  0085                     	;# 
+    89  0086                     	;# 
+    90  008C                     	;# 
+    91  008D                     	;# 
+    92  008E                     	;# 
+    93  008F                     	;# 
+    94  0090                     	;# 
+    95  0092                     	;# 
+    96  0093                     	;# 
+    97  0094                     	;# 
+    98  0098                     	;# 
+    99  0099                     	;# 
+   100  009B                     	;# 
+   101  009C                     	;# 
+   102  009D                     	;# 
+   103  009E                     	;# 
+   104  009F                     	;# 
+   105  0105                     	;# 
+   106  010C                     	;# 
+   107  010D                     	;# 
+   108  010E                     	;# 
+   109  010F                     	;# 
+   110  018C                     	;# 
+   111  018D                     	;# 
+   112  0000                     	;# 
+   113  0001                     	;# 
+   114  0002                     	;# 
+   115  0003                     	;# 
+   116  0004                     	;# 
+   117  0005                     	;# 
+   118  0006                     	;# 
+   119  000A                     	;# 
+   120  000B                     	;# 
+   121  000C                     	;# 
+   122  000D                     	;# 
+   123  000E                     	;# 
+   124  000E                     	;# 
+   125  000F                     	;# 
+   126  0010                     	;# 
+   127  0011                     	;# 
+   128  0012                     	;# 
+   129  0013                     	;# 
+   130  0014                     	;# 
+   131  0015                     	;# 
+   132  0015                     	;# 
+   133  0016                     	;# 
+   134  0017                     	;# 
+   135  0018                     	;# 
+   136  0019                     	;# 
+   137  001A                     	;# 
+   138  001E                     	;# 
+   139  001F                     	;# 
+   140  0081                     	;# 
+   141  0085                     	;# 
+   142  0086                     	;# 
+   143  008C                     	;# 
+   144  008D                     	;# 
+   145  008E                     	;# 
+   146  008F                     	;# 
+   147  0090                     	;# 
+   148  0092                     	;# 
+   149  0093                     	;# 
+   150  0094                     	;# 
+   151  0098                     	;# 
+   152  0099                     	;# 
+   153  009B                     	;# 
+   154  009C                     	;# 
+   155  009D                     	;# 
+   156  009E                     	;# 
+   157  009F                     	;# 
+   158  0105                     	;# 
+   159  010C                     	;# 
+   160  010D                     	;# 
+   161  010E                     	;# 
+   162  010F                     	;# 
+   163  018C                     	;# 
+   164  018D                     	;# 
+   165  0000                     	;# 
+   166  0001                     	;# 
+   167  0002                     	;# 
+   168  0003                     	;# 
+   169  0004                     	;# 
+   170  0005                     	;# 
+   171  0006                     	;# 
+   172  000A                     	;# 
+   173  000B                     	;# 
+   174  000C                     	;# 
+   175  000D                     	;# 
+   176  000E                     	;# 
+   177  000E                     	;# 
+   178  000F                     	;# 
+   179  0010                     	;# 
+   180  0011                     	;# 
+   181  0012                     	;# 
+   182  0013                     	;# 
+   183  0014                     	;# 
+   184  0015                     	;# 
+   185  0015                     	;# 
+   186  0016                     	;# 
+   187  0017                     	;# 
+   188  0018                     	;# 
+   189  0019                     	;# 
+   190  001A                     	;# 
+   191  001E                     	;# 
+   192  001F                     	;# 
+   193  0081                     	;# 
+   194  0085                     	;# 
+   195  0086                     	;# 
+   196  008C                     	;# 
+   197  008D                     	;# 
+   198  008E                     	;# 
+   199  008F                     	;# 
+   200  0090                     	;# 
+   201  0092                     	;# 
+   202  0093                     	;# 
+   203  0094                     	;# 
+   204  0098                     	;# 
+   205  0099                     	;# 
+   206  009B                     	;# 
+   207  009C                     	;# 
+   208  009D                     	;# 
+   209  009E                     	;# 
+   210  009F                     	;# 
+   211  0105                     	;# 
+   212  010C                     	;# 
+   213  010D                     	;# 
+   214  010E                     	;# 
+   215  010F                     	;# 
+   216  018C                     	;# 
+   217  018D                     	;# 
+   218  0000                     	;# 
+   219  0001                     	;# 
+   220  0002                     	;# 
+   221  0003                     	;# 
+   222  0004                     	;# 
+   223  0005                     	;# 
+   224  0006                     	;# 
+   225  000A                     	;# 
+   226  000B                     	;# 
+   227  000C                     	;# 
+   228  000D                     	;# 
+   229  000E                     	;# 
+   230  000E                     	;# 
+   231  000F                     	;# 
+   232  0010                     	;# 
+   233  0011                     	;# 
+   234  0012                     	;# 
+   235  0013                     	;# 
+   236  0014                     	;# 
+   237  0015                     	;# 
+   238  0015                     	;# 
+   239  0016                     	;# 
+   240  0017                     	;# 
+   241  0018                     	;# 
+   242  0019                     	;# 
+   243  001A                     	;# 
+   244  001E                     	;# 
+   245  001F                     	;# 
+   246  0081                     	;# 
+   247  0085                     	;# 
+   248  0086                     	;# 
+   249  008C                     	;# 
+   250  008D                     	;# 
+   251  008E                     	;# 
+   252  008F                     	;# 
+   253  0090                     	;# 
+   254  0092                     	;# 
+   255  0093                     	;# 
+   256  0094                     	;# 
+   257  0098                     	;# 
+   258  0099                     	;# 
+   259  009B                     	;# 
+   260  009C                     	;# 
+   261  009D                     	;# 
+   262  009E                     	;# 
+   263  009F                     	;# 
+   264  0105                     	;# 
+   265  010C                     	;# 
+   266  010D                     	;# 
+   267  010E                     	;# 
+   268  010F                     	;# 
+   269  018C                     	;# 
+   270  018D                     	;# 
+   271                           
+   272                           	psect	strings
+   273  016F                     __pstrings:	
+   274  016F                     stringtab:	
+   275  016F                     __stringtab:	
+   276  016F                     stringcode:	
+   277                           ;	String table - string pointers are 1 byte each
+   278                           
+   279  016F                     stringdir:	
+   280  016F  3001               	movlw	high stringdir
+   281  0170  008A               	movwf	10
+   282  0171  0804               	movf	4,w
+   283  0172  0A84               	incf	4,f
+   284  0173  0782               	addwf	2,f
+   285  0174                     __stringbase:	
+   286  0174  3400               	retlw	0
+   287  0175                     __end_of__stringtab:	
+   288  0175                     _hexpowers:	
+   289  0175  3401               	retlw	1
+   290  0176  3400               	retlw	0
+   291  0177  3400               	retlw	0
+   292  0178  3400               	retlw	0
+   293  0179  3410               	retlw	16
+   294  017A  3400               	retlw	0
+   295  017B  3400               	retlw	0
+   296  017C  3400               	retlw	0
+   297  017D  3400               	retlw	0
+   298  017E  3401               	retlw	1
+   299  017F  3400               	retlw	0
+   300  0180  3400               	retlw	0
+   301  0181  3400               	retlw	0
+   302  0182  3410               	retlw	16
+   303  0183  3400               	retlw	0
+   304  0184  3400               	retlw	0
+   305  0185  3400               	retlw	0
+   306  0186  3400               	retlw	0
+   307  0187  3401               	retlw	1
+   308  0188  3400               	retlw	0
+   309  0189  3400               	retlw	0
+   310  018A  3400               	retlw	0
+   311  018B  3410               	retlw	16
+   312  018C  3400               	retlw	0
+   313  018D  3400               	retlw	0
+   314  018E  3400               	retlw	0
+   315  018F  3400               	retlw	0
+   316  0190  3401               	retlw	1
+   317  0191  3400               	retlw	0
+   318  0192  3400               	retlw	0
+   319  0193  3400               	retlw	0
+   320  0194  3410               	retlw	16
+   321  0195                     __end_of_hexpowers:	
+   322  0195                     _SAMSUNG:	
+   323  0195  34F9               	retlw	249
+   324  0196  3406               	retlw	6
+   325  0197  34E0               	retlw	224
+   326  0198  34E0               	retlw	224
+   327  0199  3479               	retlw	121
+   328  019A  3486               	retlw	134
+   329  019B  34E0               	retlw	224
+   330  019C  34E0               	retlw	224
+   331  019D                     __end_of_SAMSUNG:	
+   332  0015                     _CCPR1L	set	21
+   333  0005                     _PORTA	set	5
+   334  0006                     _PORTB	set	6
+   335  0001                     _TMR0	set	1
+   336  0019                     _TXREG	set	25
+   337  00BA                     _CCP1M2	set	186
+   338  00BB                     _CCP1M3	set	187
+   339  00BD                     _CCP1X	set	189
+   340  00BC                     _CCP1Y	set	188
+   341  005F                     _GIE	set	95
+   342  002A                     _RA2	set	42
+   343  002B                     _RA3	set	43
+   344  0033                     _RB3	set	51
+   345  00C7                     _SPEN	set	199
+   346  0090                     _T2CKPS0	set	144
+   347  0091                     _T2CKPS1	set	145
+   348  005D                     _TMR0IE	set	93
+   349  005A                     _TMR0IF	set	90
+   350  0092                     _TMR2ON	set	146
+   351  009B                     _ANSEL	set	155
+   352  0092                     _PR2	set	146
+   353  0099                     _SPBRG	set	153
+   354  0085                     _TRISA	set	133
+   355  0086                     _TRISB	set	134
+   356  04C2                     _BRGH	set	1218
+   357  0408                     _PS0	set	1032
+   358  0409                     _PS1	set	1033
+   359  040A                     _PS2	set	1034
+   360  040B                     _PSA	set	1035
+   361  04C4                     _SYNC	set	1220
+   362  040D                     _T0CS	set	1037
+   363  04C1                     _TRMT	set	1217
+   364  04C5                     _TXEN	set	1221
+   365  019D                     STR_2:	
+   366  019D  3430               	retlw	48	;'0'
+   367  019E  3431               	retlw	49	;'1'
+   368  019F  3432               	retlw	50	;'2'
+   369  01A0  3433               	retlw	51	;'3'
+   370  01A1  3434               	retlw	52	;'4'
+   371  01A2  3435               	retlw	53	;'5'
+   372  01A3  3436               	retlw	54	;'6'
+   373  01A4  3437               	retlw	55	;'7'
+   374  01A5  3438               	retlw	56	;'8'
+   375  01A6  3439               	retlw	57	;'9'
+   376  01A7  3461               	retlw	97	;'a'
+   377  01A8  3462               	retlw	98	;'b'
+   378  01A9  3463               	retlw	99	;'c'
+   379  01AA  3464               	retlw	100	;'d'
+   380  01AB  3465               	retlw	101	;'e'
+   381  01AC  3466               	retlw	102	;'f'
+   382  01AD  3400               	retlw	0
+   383  01AE                     STR_1:	
+   384  01AE  3448               	retlw	72	;'H'
+   385  01AF  3465               	retlw	101	;'e'
+   386  01B0  3478               	retlw	120	;'x'
+   387  01B1  343A               	retlw	58	;':'
+   388  01B2  3420               	retlw	32	;' '
+   389  01B3  3430               	retlw	48	;'0'
+   390  01B4  3478               	retlw	120	;'x'
+   391  01B5  3425               	retlw	37	;'%'
+   392  01B6  346C               	retlw	108	;'l'
+   393  01B7  3478               	retlw	120	;'x'
+   394  01B8  3400               	retlw	0
+   395                           
+   396                           ; #config settings
+   397  0000                     
+   398                           	psect	cinit
+   399  0013                     start_initialization:	
+   400  0013                     __initialization:	
+   401                           
+   402                           ; Clear objects allocated to COMMON
+   403  0013  01F8               	clrf	__pbssCOMMON& (0+127)
+   404  0014  01F9               	clrf	(__pbssCOMMON+1)& (0+127)
+   405                           
+   406                           ; Clear objects allocated to BANK0
+   407  0015  01B2               	clrf	__pbssBANK0& (0+127)
+   408  0016  01B3               	clrf	(__pbssBANK0+1)& (0+127)
+   409  0017  01B4               	clrf	(__pbssBANK0+2)& (0+127)
+   410  0018  01B5               	clrf	(__pbssBANK0+3)& (0+127)
+   411  0019                     end_of_initialization:	
+   412                           ;End of C runtime variable initialization code
+   413                           
+   414  0019                     __end_of__initialization:	
+   415  0019  0183               	clrf	3
+   416  001A  118A  281C         	ljmp	_main	;jump to C main() function
+   417                           
+   418                           	psect	bssCOMMON
+   419  0078                     __pbssCOMMON:	
+   420  0078                     _RX_status:	
+   421  0078                     	ds	1
+   422  0079                     _bitCount:	
+   423  0079                     	ds	1
+   424                           
+   425                           	psect	bssBANK0
+   426  0032                     __pbssBANK0:	
+   427  0032                     _demodulatedValue:	
+   428  0032                     	ds	4
+   429                           
+   430                           	psect	cstackCOMMON
+   431  0070                     __pcstackCOMMON:	
+   432  0070                     ?_setTMR0:	
+   433  0070                     ?_getTMR0:	
+   434                           ; 1 bytes @ 0x0
+   435                           
+   436  0070                     ?_TMR0_Init:	
+   437                           ; 1 bytes @ 0x0
+   438                           
+   439  0070                     ?_PWM_Init:	
+   440                           ; 1 bytes @ 0x0
+   441                           
+   442  0070                     ?_IR_GetStateDuration:	
+   443                           ; 1 bytes @ 0x0
+   444                           
+   445  0070                     ?_myISR:	
+   446                           ; 1 bytes @ 0x0
+   447                           
+   448  0070                     ??_myISR:	
+   449                           ; 1 bytes @ 0x0
+   450                           
+   451  0070                     ?_main:	
+   452                           ; 1 bytes @ 0x0
+   453                           
+   454  0070                     ?_PWM_SetPeriod:	
+   455                           ; 1 bytes @ 0x0
+   456                           
+   457  0070                     ?_TMR0_SetPrescaler:	
+   458                           ; 1 bytes @ 0x0
+   459                           
+   460                           
+   461                           ; 1 bytes @ 0x0
+   462  0070                     	ds	4
+   463  0074                     ??_setTMR0:	
+   464  0074                     ??_getTMR0:	
+   465                           ; 1 bytes @ 0x4
+   466                           
+   467  0074                     ??_TMR0_Init:	
+   468                           ; 1 bytes @ 0x4
+   469                           
+   470  0074                     ?_PWM_SetDutyCycle:	
+   471                           ; 1 bytes @ 0x4
+   472                           
+   473  0074                     ?_IR_Demodulate:	
+   474                           ; 1 bytes @ 0x4
+   475                           
+   476  0074                     ??_PWM_SetPeriod:	
+   477                           ; 1 bytes @ 0x4
+   478                           
+   479  0074                     ??_TMR0_SetPrescaler:	
+   480                           ; 1 bytes @ 0x4
+   481                           
+   482  0074                     IR_Demodulate@riseTime:	
+   483                           ; 1 bytes @ 0x4
+   484                           
+   485  0074                     PWM_SetPeriod@period:	
+   486                           ; 1 bytes @ 0x4
+   487                           
+   488  0074                     setTMR0@value:	
+   489                           ; 1 bytes @ 0x4
+   490                           
+   491  0074                     PWM_SetDutyCycle@dutyCycle:	
+   492                           ; 1 bytes @ 0x4
+   493                           
+   494                           
+   495                           ; 2 bytes @ 0x4
+   496  0074                     	ds	1
+   497  0075                     ??_IR_GetStateDuration:	
+   498  0075                     ??_IR_Demodulate:	
+   499                           ; 1 bytes @ 0x5
+   500                           
+   501  0075                     IR_GetStateDuration@state:	
+   502                           ; 1 bytes @ 0x5
+   503                           
+   504                           
+   505                           ; 1 bytes @ 0x5
+   506  0075                     	ds	1
+   507  0076                     ??_PWM_SetDutyCycle:	
+   508  0076                     IR_Demodulate@fallTime:	
+   509                           ; 1 bytes @ 0x6
+   510                           
+   511                           
+   512                           ; 1 bytes @ 0x6
+   513  0076                     	ds	1
+   514  0077                     ??_IR_Detect:	
+   515                           
+   516                           ; 1 bytes @ 0x7
+   517  0077                     	ds	1
+   518  0078                     ??_PWM_Init:	
+   519                           
+   520                           	psect	cstackBANK0
+   521  0020                     __pcstackBANK0:	
+   522                           ; 1 bytes @ 0x8
+   523                           
+   524  0020                     ?_IR_Detect:	
+   525                           
+   526                           ; 4 bytes @ 0x0
+   527  0020                     	ds	4
+   528  0024                     IR_Detect@fallTime:	
+   529                           
+   530                           ; 1 bytes @ 0x4
+   531  0024                     	ds	1
+   532  0025                     IR_Detect@riseTime:	
+   533                           
+   534                           ; 1 bytes @ 0x5
+   535  0025                     	ds	1
+   536  0026                     IR_Detect@fallTime_70:	
+   537                           
+   538                           ; 1 bytes @ 0x6
+   539  0026                     	ds	1
+   540  0027                     IR_Detect@riseTime_71:	
+   541                           
+   542                           ; 1 bytes @ 0x7
+   543  0027                     	ds	1
+   544  0028                     ??_main:	
+   545                           
+   546                           ; 1 bytes @ 0x8
+   547  0028                     	ds	4
+   548  002C                     main@val:	
+   549                           
+   550                           ; 4 bytes @ 0xC
+   551  002C                     	ds	4
+   552  0030                     main@dutyCycle:	
+   553                           
+   554                           ; 2 bytes @ 0x10
+   555  0030                     	ds	2
+   556                           
+   557                           	psect	maintext
+   558  001C                     __pmaintext:	
+   559 ;;
+   560 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   561 ;;
+   562 ;; *************** function _main *****************
+   563 ;; Defined at:
+   564 ;;		line 19 in file "main.c"
+   565 ;; Parameters:    Size  Location     Type
+   566 ;;		None
+   567 ;; Auto vars:     Size  Location     Type
+   568 ;;  val             4   12[BANK0 ] unsigned long 
+   569 ;;  dutyCycle       2   16[BANK0 ] unsigned short 
+   570 ;; Return value:  Size  Location     Type
+   571 ;;                  1    wreg      void 
+   572 ;; Registers used:
+   573 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   574 ;; Tracked objects:
+   575 ;;		On entry : B00/0
+   576 ;;		On exit  : 0/0
+   577 ;;		Unchanged: 0/0
+   578 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   579 ;;      Params:         0       0       0       0       0
+   580 ;;      Locals:         0       6       0       0       0
+   581 ;;      Temps:          0       4       0       0       0
+   582 ;;      Totals:         0      10       0       0       0
+   583 ;;Total ram usage:       10 bytes
+   584 ;; Hardware stack levels required when called:    5
+   585 ;; This function calls:
+   586 ;;		_IR_Detect
+   587 ;;		_PWM_Init
+   588 ;;		_PWM_SetDutyCycle
+   589 ;;		_TMR0_Init
+   590 ;; This function is called by:
+   591 ;;		Startup code after reset
+   592 ;; This function uses a non-reentrant model
+   593 ;;
+   594                           
+   595                           
+   596                           ;psect for function _main
+   597  001C                     _main:	
+   598                           
+   599                           ;main.c: 20: ANSEL = 0;
+   600                           
+   601                           ;incstack = 0
+   602                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   603  001C  1683               	bsf	3,5	;RP0=1, select bank1
+   604  001D  1303               	bcf	3,6	;RP1=0, select bank1
+   605  001E  019B               	clrf	27	;volatile
+   606                           
+   607                           ;main.c: 21: TRISA = 0;
+   608  001F  0185               	clrf	5	;volatile
+   609                           
+   610                           ;main.c: 22: TRISB = 0b00001000;
+   611  0020  3008               	movlw	8
+   612  0021  0086               	movwf	6	;volatile
+   613                           
+   614                           ;main.c: 24: PORTA = 0b00000100;
+   615  0022  3004               	movlw	4
+   616  0023  1283               	bcf	3,5	;RP0=0, select bank0
+   617  0024  1303               	bcf	3,6	;RP1=0, select bank0
+   618  0025  0085               	movwf	5	;volatile
+   619                           
+   620                           ;main.c: 25: PORTB = 0b00001000;
+   621  0026  3008               	movlw	8
+   622  0027  0086               	movwf	6	;volatile
+   623                           
+   624                           ;main.c: 28: TMR0_Init();
+   625  0028  118A  21DC  118A   	fcall	_TMR0_Init
+   626                           
+   627                           ;main.c: 34: PWM_Init();
+   628  002B  118A  21B9  118A   	fcall	_PWM_Init
+   629                           
+   630                           ;main.c: 36: unsigned short dutyCycle = 0x0200;
+   631  002E  3000               	movlw	0
+   632  002F  1283               	bcf	3,5	;RP0=0, select bank0
+   633  0030  1303               	bcf	3,6	;RP1=0, select bank0
+   634  0031  00B0               	movwf	main@dutyCycle
+   635  0032  3002               	movlw	2
+   636  0033  00B1               	movwf	main@dutyCycle+1
+   637  0034  284A               	goto	l1002
+   638  0035                     l1006:	
+   639                           
+   640                           ;main.c: 41: RA2 = 1;
+   641  0035  1505               	bsf	5,2	;volatile
+   642                           
+   643                           ;main.c: 43: if(dutyCycle < 974){
+   644  0036  3003               	movlw	3
+   645  0037  0231               	subwf	main@dutyCycle+1,w
+   646  0038  30CE               	movlw	206
+   647  0039  1903               	skipnz
+   648  003A  0230               	subwf	main@dutyCycle,w
+   649  003B  1803               	skipnc
+   650  003C  284A               	goto	l1002
+   651                           
+   652                           ;main.c: 44: dutyCycle += 50;
+   653  003D  3032               	movlw	50
+   654  003E  07B0               	addwf	main@dutyCycle,f
+   655  003F  1803               	skipnc
+   656  0040  0AB1               	incf	main@dutyCycle+1,f
+   657  0041  3000               	movlw	0
+   658  0042  07B1               	addwf	main@dutyCycle+1,f
+   659  0043                     L1:	
+   660                           
+   661                           ;main.c: 46: PWM_SetDutyCycle(dutyCycle);
+   662  0043  0831               	movf	main@dutyCycle+1,w
+   663  0044  00F5               	movwf	PWM_SetDutyCycle@dutyCycle+1
+   664  0045  0830               	movf	main@dutyCycle,w
+   665  0046  00F4               	movwf	PWM_SetDutyCycle@dutyCycle
+   666  0047  118A  21ED  118A   	fcall	_PWM_SetDutyCycle
+   667  004A                     l1002:	
+   668                           ;main.c: 37: while(1){
+   669                           
+   670                           ;main.c: 47: }
+   671                           ;main.c: 48: }
+   672                           
+   673                           
+   674                           ;main.c: 38: unsigned long val = IR_Detect();
+   675  004A  118A  20AC  118A   	fcall	_IR_Detect
+   676  004D  1283               	bcf	3,5	;RP0=0, select bank0
+   677  004E  1303               	bcf	3,6	;RP1=0, select bank0
+   678  004F  0823               	movf	?_IR_Detect+3,w
+   679  0050  00AF               	movwf	main@val+3
+   680  0051  0822               	movf	?_IR_Detect+2,w
+   681  0052  00AE               	movwf	main@val+2
+   682  0053  0821               	movf	?_IR_Detect+1,w
+   683  0054  00AD               	movwf	main@val+1
+   684  0055  0820               	movf	?_IR_Detect,w
+   685  0056  00AC               	movwf	main@val
+   686                           
+   687                           ;main.c: 40: if(val == SAMSUNG.UP){
+   688  0057  3021               	movlw	low (_SAMSUNG-__stringbase)
+   689  0058  0084               	movwf	4
+   690  0059  118A  216F  118A   	fcall	stringdir
+   691  005C  00A8               	movwf	??_main
+   692  005D  118A  216F  118A   	fcall	stringdir
+   693  0060  00A9               	movwf	??_main+1
+   694  0061  118A  216F  118A   	fcall	stringdir
+   695  0064  00AA               	movwf	??_main+2
+   696  0065  118A  216F  118A   	fcall	stringdir
+   697  0068  00AB               	movwf	??_main+3
+   698  0069  082F               	movf	main@val+3,w
+   699  006A  062B               	xorwf	??_main+3,w
+   700  006B  1D03               	skipz
+   701  006C  2877               	goto	u735
+   702  006D  082E               	movf	main@val+2,w
+   703  006E  062A               	xorwf	??_main+2,w
+   704  006F  1D03               	skipz
+   705  0070  2877               	goto	u735
+   706  0071  082D               	movf	main@val+1,w
+   707  0072  0629               	xorwf	??_main+1,w
+   708  0073  1D03               	skipz
+   709  0074  2877               	goto	u735
+   710  0075  082C               	movf	main@val,w
+   711  0076  0628               	xorwf	??_main,w
+   712  0077                     u735:	
+   713  0077  1903               	btfsc	3,2
+   714  0078  2835               	goto	l1006
+   715                           
+   716                           ;main.c: 49: else if(val == SAMSUNG.DOWN){
+   717  0079  3025               	movlw	low (((_SAMSUNG+4)-__stringbase)| (0+32768))
+   718  007A  0084               	movwf	4
+   719  007B  118A  216F  118A   	fcall	stringdir
+   720  007E  1283               	bcf	3,5	;RP0=0, select bank0
+   721  007F  1303               	bcf	3,6	;RP1=0, select bank0
+   722  0080  00A8               	movwf	??_main
+   723  0081  118A  216F  118A   	fcall	stringdir
+   724  0084  00A9               	movwf	??_main+1
+   725  0085  118A  216F  118A   	fcall	stringdir
+   726  0088  00AA               	movwf	??_main+2
+   727  0089  118A  216F  118A   	fcall	stringdir
+   728  008C  00AB               	movwf	??_main+3
+   729  008D  082F               	movf	main@val+3,w
+   730  008E  062B               	xorwf	??_main+3,w
+   731  008F  1D03               	skipz
+   732  0090  289B               	goto	u755
+   733  0091  082E               	movf	main@val+2,w
+   734  0092  062A               	xorwf	??_main+2,w
+   735  0093  1D03               	skipz
+   736  0094  289B               	goto	u755
+   737  0095  082D               	movf	main@val+1,w
+   738  0096  0629               	xorwf	??_main+1,w
+   739  0097  1D03               	skipz
+   740  0098  289B               	goto	u755
+   741  0099  082C               	movf	main@val,w
+   742  009A  0628               	xorwf	??_main,w
+   743  009B                     u755:	
+   744  009B  1D03               	skipz
+   745  009C  284A               	goto	l1002
+   746                           
+   747                           ;main.c: 50: RA2 = 0;
+   748  009D  1105               	bcf	5,2	;volatile
+   749                           
+   750                           ;main.c: 52: if(dutyCycle > 49){
+   751  009E  3000               	movlw	0
+   752  009F  0231               	subwf	main@dutyCycle+1,w
+   753  00A0  3032               	movlw	50
+   754  00A1  1903               	skipnz
+   755  00A2  0230               	subwf	main@dutyCycle,w
+   756  00A3  1C03               	skipc
+   757  00A4  284A               	goto	l1002
+   758                           
+   759                           ;main.c: 53: dutyCycle -= 50;
+   760  00A5  3032               	movlw	50
+   761  00A6  02B0               	subwf	main@dutyCycle,f
+   762  00A7  3000               	movlw	0
+   763  00A8  1C03               	skipc
+   764  00A9  03B1               	decf	main@dutyCycle+1,f
+   765  00AA  02B1               	subwf	main@dutyCycle+1,f
+   766  00AB  2843               	goto	L1
+   767  00AC                     __end_of_main:	
+   768                           ;main.c: 56: }
+   769                           ;main.c: 57: }
+   770                           ;main.c: 58: }
+   771                           ;main.c: 60: return;
+   772                           
+   773                           ;main.c: 55: PWM_SetDutyCycle(dutyCycle);
+   774                           
+   775                           
+   776                           	psect	text1
+   777  01DC                     __ptext1:	
+   778 ;; *************** function _TMR0_Init *****************
+   779 ;; Defined at:
+   780 ;;		line 11 in file "_src/tmr0.c"
+   781 ;; Parameters:    Size  Location     Type
+   782 ;;		None
+   783 ;; Auto vars:     Size  Location     Type
+   784 ;;		None
+   785 ;; Return value:  Size  Location     Type
+   786 ;;                  1    wreg      void 
+   787 ;; Registers used:
+   788 ;;		status,2, status,0, pclath, cstack
+   789 ;; Tracked objects:
+   790 ;;		On entry : 0/0
+   791 ;;		On exit  : 0/0
+   792 ;;		Unchanged: 0/0
+   793 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   794 ;;      Params:         0       0       0       0       0
+   795 ;;      Locals:         0       0       0       0       0
+   796 ;;      Temps:          0       0       0       0       0
+   797 ;;      Totals:         0       0       0       0       0
+   798 ;;Total ram usage:        0 bytes
+   799 ;; Hardware stack levels used:    1
+   800 ;; Hardware stack levels required when called:    2
+   801 ;; This function calls:
+   802 ;;		_TMR0_SetPrescaler
+   803 ;; This function is called by:
+   804 ;;		_main
+   805 ;; This function uses a non-reentrant model
+   806 ;;
+   807                           
+   808                           
+   809                           ;psect for function _TMR0_Init
+   810  01DC                     _TMR0_Init:	
+   811                           
+   812                           ;tmr0.c: 14: GIE = TMR0IE = 1;
+   813                           
+   814                           ;incstack = 0
+   815                           ; Regs used in _TMR0_Init: [status,2+status,0+pclath+cstack]
+   816  01DC  168B               	bsf	11,5	;volatile
+   817  01DD  1E8B               	btfss	11,5	;volatile
+   818  01DE  29E1               	goto	u670
+   819  01DF  178B               	bsf	11,7	;volatile
+   820  01E0  29E2               	goto	u684
+   821  01E1                     u670:	
+   822  01E1  138B               	bcf	11,7	;volatile
+   823  01E2                     u684:	
+   824                           
+   825                           ;tmr0.c: 15: TMR0IF = 0;
+   826  01E2  110B               	bcf	11,2	;volatile
+   827                           
+   828                           ;tmr0.c: 17: TMR0 = 0;
+   829  01E3  1283               	bcf	3,5	;RP0=0, select bank0
+   830  01E4  1303               	bcf	3,6	;RP1=0, select bank0
+   831  01E5  0181               	clrf	1	;volatile
+   832                           
+   833                           ;tmr0.c: 18: T0CS = 0;
+   834  01E6  1683               	bsf	3,5	;RP0=1, select bank1
+   835  01E7  1303               	bcf	3,6	;RP1=0, select bank1
+   836  01E8  1281               	bcf	1,5	;volatile
+   837                           
+   838                           ;tmr0.c: 19: PSA = 0;
+   839  01E9  1181               	bcf	1,3	;volatile
+   840                           
+   841                           ;tmr0.c: 21: TMR0_SetPrescaler();
+   842  01EA  118A  222C         	fcall	_TMR0_SetPrescaler
+   843  01EC  0008               	return
+   844  01ED                     __end_of_TMR0_Init:	
+   845                           
+   846                           	psect	text2
+   847  01B9                     __ptext2:	
+   848 ;; *************** function _PWM_Init *****************
+   849 ;; Defined at:
+   850 ;;		line 32 in file "_src/pwm.c"
+   851 ;; Parameters:    Size  Location     Type
+   852 ;;		None
+   853 ;; Auto vars:     Size  Location     Type
+   854 ;;		None
+   855 ;; Return value:  Size  Location     Type
+   856 ;;                  1    wreg      void 
+   857 ;; Registers used:
+   858 ;;		wreg, status,2, status,0, pclath, cstack
+   859 ;; Tracked objects:
+   860 ;;		On entry : 0/0
+   861 ;;		On exit  : 0/0
+   862 ;;		Unchanged: 0/0
+   863 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   864 ;;      Params:         0       0       0       0       0
+   865 ;;      Locals:         0       0       0       0       0
+   866 ;;      Temps:          0       0       0       0       0
+   867 ;;      Totals:         0       0       0       0       0
+   868 ;;Total ram usage:        0 bytes
+   869 ;; Hardware stack levels used:    1
+   870 ;; Hardware stack levels required when called:    2
+   871 ;; This function calls:
+   872 ;;		_PWM_SetDutyCycle
+   873 ;;		_PWM_SetPeriod
+   874 ;; This function is called by:
+   875 ;;		_main
+   876 ;; This function uses a non-reentrant model
+   877 ;;
+   878                           
+   879                           
+   880                           ;psect for function _PWM_Init
+   881  01B9                     _PWM_Init:	
+   882                           
+   883                           ;pwm.c: 34: PWM_SetPeriod(0xFF);
+   884                           
+   885                           ;incstack = 0
+   886                           ; Regs used in _PWM_Init: [wreg+status,2+status,0+pclath+cstack]
+   887  01B9  30FF               	movlw	255
+   888  01BA  118A  2226  118A   	fcall	_PWM_SetPeriod
+   889                           
+   890                           ;pwm.c: 35: PWM_SetDutyCycle(0x0200);
+   891  01BD  3000               	movlw	0
+   892  01BE  00F4               	movwf	PWM_SetDutyCycle@dutyCycle
+   893  01BF  3002               	movlw	2
+   894  01C0  00F5               	movwf	PWM_SetDutyCycle@dutyCycle+1
+   895  01C1  118A  21ED  118A   	fcall	_PWM_SetDutyCycle
+   896                           
+   897                           ;pwm.c: 38: T2CKPS1 = T2CKPS0 = 1;
+   898  01C4  1283               	bcf	3,5	;RP0=0, select bank0
+   899  01C5  1303               	bcf	3,6	;RP1=0, select bank0
+   900  01C6  1412               	bsf	18,0	;volatile
+   901  01C7  1C12               	btfss	18,0	;volatile
+   902  01C8  29CD               	goto	u690
+   903  01C9  1283               	bcf	3,5	;RP0=0, select bank0
+   904  01CA  1303               	bcf	3,6	;RP1=0, select bank0
+   905  01CB  1492               	bsf	18,1	;volatile
+   906  01CC  29D0               	goto	l982
+   907  01CD                     u690:	
+   908  01CD  1283               	bcf	3,5	;RP0=0, select bank0
+   909  01CE  1303               	bcf	3,6	;RP1=0, select bank0
+   910  01CF  1092               	bcf	18,1	;volatile
+   911  01D0                     l982:	
+   912                           
+   913                           ;pwm.c: 40: TMR2ON = 1;
+   914  01D0  1512               	bsf	18,2	;volatile
+   915                           
+   916                           ;pwm.c: 42: CCP1M3 = CCP1M2 = 1;
+   917  01D1  1517               	bsf	23,2	;volatile
+   918  01D2  1D17               	btfss	23,2	;volatile
+   919  01D3  29D8               	goto	u710
+   920  01D4  1283               	bcf	3,5	;RP0=0, select bank0
+   921  01D5  1303               	bcf	3,6	;RP1=0, select bank0
+   922  01D6  1597               	bsf	23,3	;volatile
+   923  01D7  0008               	return
+   924  01D8                     u710:	
+   925  01D8  1283               	bcf	3,5	;RP0=0, select bank0
+   926  01D9  1303               	bcf	3,6	;RP1=0, select bank0
+   927  01DA  1197               	bcf	23,3	;volatile
+   928  01DB  0008               	return
+   929  01DC                     __end_of_PWM_Init:	
+   930                           ;pwm.c: 44: return;
+   931                           
+   932                           
+   933                           	psect	text3
+   934  0226                     __ptext3:	
+   935 ;; *************** function _PWM_SetPeriod *****************
+   936 ;; Defined at:
+   937 ;;		line 13 in file "_src/pwm.c"
+   938 ;; Parameters:    Size  Location     Type
+   939 ;;  period          1    wreg     unsigned char 
+   940 ;; Auto vars:     Size  Location     Type
+   941 ;;  period          1    4[COMMON] unsigned char 
+   942 ;; Return value:  Size  Location     Type
+   943 ;;                  1    wreg      void 
+   944 ;; Registers used:
+   945 ;;		wreg
+   946 ;; Tracked objects:
+   947 ;;		On entry : 0/0
+   948 ;;		On exit  : 0/0
+   949 ;;		Unchanged: 0/0
+   950 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   951 ;;      Params:         0       0       0       0       0
+   952 ;;      Locals:         1       0       0       0       0
+   953 ;;      Temps:          0       0       0       0       0
+   954 ;;      Totals:         1       0       0       0       0
+   955 ;;Total ram usage:        1 bytes
+   956 ;; Hardware stack levels used:    1
+   957 ;; Hardware stack levels required when called:    1
+   958 ;; This function calls:
+   959 ;;		Nothing
+   960 ;; This function is called by:
+   961 ;;		_PWM_Init
+   962 ;; This function uses a non-reentrant model
+   963 ;;
+   964                           
+   965                           
+   966                           ;psect for function _PWM_SetPeriod
+   967  0226                     _PWM_SetPeriod:	
+   968                           
+   969                           ;incstack = 0
+   970                           ; Regs used in _PWM_SetPeriod: [wreg]
+   971                           ;PWM_SetPeriod@period stored from wreg
+   972  0226  00F4               	movwf	PWM_SetPeriod@period
+   973                           
+   974                           ;pwm.c: 14: PR2 = period;
+   975  0227  0874               	movf	PWM_SetPeriod@period,w
+   976  0228  1683               	bsf	3,5	;RP0=1, select bank1
+   977  0229  1303               	bcf	3,6	;RP1=0, select bank1
+   978  022A  0092               	movwf	18	;volatile
+   979  022B  0008               	return
+   980  022C                     __end_of_PWM_SetPeriod:	
+   981                           ;pwm.c: 15: return;
+   982                           
+   983                           
+   984                           	psect	text4
+   985  01ED                     __ptext4:	
+   986 ;; *************** function _PWM_SetDutyCycle *****************
+   987 ;; Defined at:
+   988 ;;		line 18 in file "_src/pwm.c"
+   989 ;; Parameters:    Size  Location     Type
+   990 ;;  dutyCycle       2    4[COMMON] unsigned short 
+   991 ;; Auto vars:     Size  Location     Type
+   992 ;;		None
+   993 ;; Return value:  Size  Location     Type
+   994 ;;                  1    wreg      void 
+   995 ;; Registers used:
+   996 ;;		wreg, status,2, status,0
+   997 ;; Tracked objects:
+   998 ;;		On entry : 0/0
+   999 ;;		On exit  : 0/0
+  1000 ;;		Unchanged: 0/0
+  1001 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1002 ;;      Params:         2       0       0       0       0
+  1003 ;;      Locals:         0       0       0       0       0
+  1004 ;;      Temps:          2       0       0       0       0
+  1005 ;;      Totals:         4       0       0       0       0
+  1006 ;;Total ram usage:        4 bytes
+  1007 ;; Hardware stack levels used:    1
+  1008 ;; Hardware stack levels required when called:    1
+  1009 ;; This function calls:
+  1010 ;;		Nothing
+  1011 ;; This function is called by:
+  1012 ;;		_main
+  1013 ;;		_PWM_Init
+  1014 ;;		_PWM_SetDutyCycle_percent
+  1015 ;; This function uses a non-reentrant model
+  1016 ;;
+  1017                           
+  1018                           
+  1019                           ;psect for function _PWM_SetDutyCycle
+  1020  01ED                     _PWM_SetDutyCycle:	
+  1021                           
+  1022                           ;pwm.c: 19: CCP1Y = dutyCycle | 0x01;
+  1023                           
+  1024                           ;incstack = 0
+  1025                           ; Regs used in _PWM_SetDutyCycle: [wreg+status,2+status,0]
+  1026  01ED  1283               	bcf	3,5	;RP0=0, select bank0
+  1027  01EE  1303               	bcf	3,6	;RP1=0, select bank0
+  1028  01EF  1617               	bsf	23,4	;volatile
+  1029                           
+  1030                           ;pwm.c: 20: CCP1X = (dutyCycle >> 1) | 0x01;
+  1031  01F0  1697               	bsf	23,5	;volatile
+  1032                           
+  1033                           ;pwm.c: 21: CCPR1L = dutyCycle >> 2;
+  1034  01F1  0875               	movf	PWM_SetDutyCycle@dutyCycle+1,w
+  1035  01F2  00F7               	movwf	??_PWM_SetDutyCycle+1
+  1036  01F3  0874               	movf	PWM_SetDutyCycle@dutyCycle,w
+  1037  01F4  00F6               	movwf	??_PWM_SetDutyCycle
+  1038  01F5  1003               	clrc
+  1039  01F6  0CF7               	rrf	??_PWM_SetDutyCycle+1,f
+  1040  01F7  0CF6               	rrf	??_PWM_SetDutyCycle,f
+  1041  01F8  1003               	clrc
+  1042  01F9  0CF7               	rrf	??_PWM_SetDutyCycle+1,f
+  1043  01FA  0CF6               	rrf	??_PWM_SetDutyCycle,f
+  1044  01FB  0876               	movf	??_PWM_SetDutyCycle,w
+  1045  01FC  0095               	movwf	21	;volatile
+  1046  01FD  0008               	return
+  1047  01FE                     __end_of_PWM_SetDutyCycle:	
+  1048                           ;pwm.c: 22: return;
+  1049                           
+  1050                           
+  1051                           	psect	text5
+  1052  00AC                     __ptext5:	
+  1053 ;; *************** function _IR_Detect *****************
+  1054 ;; Defined at:
+  1055 ;;		line 80 in file "_inc/ir_rx.h"
+  1056 ;; Parameters:    Size  Location     Type
+  1057 ;;		None
+  1058 ;; Auto vars:     Size  Location     Type
+  1059 ;;  riseTime        1    7[BANK0 ] unsigned char 
+  1060 ;;  fallTime        1    6[BANK0 ] unsigned char 
+  1061 ;;  riseTime        1    5[BANK0 ] unsigned char 
+  1062 ;;  fallTime        1    4[BANK0 ] unsigned char 
+  1063 ;; Return value:  Size  Location     Type
+  1064 ;;                  4    0[BANK0 ] unsigned long 
+  1065 ;; Registers used:
+  1066 ;;		wreg, status,2, status,0, pclath, cstack
+  1067 ;; Tracked objects:
+  1068 ;;		On entry : 0/0
+  1069 ;;		On exit  : 0/0
+  1070 ;;		Unchanged: 0/0
+  1071 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1072 ;;      Params:         0       4       0       0       0
+  1073 ;;      Locals:         0       4       0       0       0
+  1074 ;;      Temps:          1       0       0       0       0
+  1075 ;;      Totals:         1       8       0       0       0
+  1076 ;;Total ram usage:        9 bytes
+  1077 ;; Hardware stack levels used:    1
+  1078 ;; Hardware stack levels required when called:    4
+  1079 ;; This function calls:
+  1080 ;;		_IR_Demodulate
+  1081 ;;		_IR_GetStateDuration
+  1082 ;; This function is called by:
+  1083 ;;		_main
+  1084 ;; This function uses a non-reentrant model
+  1085 ;;
+  1086                           
+  1087                           
+  1088                           ;psect for function _IR_Detect
+  1089  00AC                     _IR_Detect:	
+  1090                           
+  1091                           ;ir_rx.h: 82: if(RX_status == 0 && RB3){
+  1092                           
+  1093                           ;incstack = 0
+  1094                           ; Regs used in _IR_Detect: [wreg+status,2+status,0+pclath+cstack]
+  1095  00AC  0878               	movf	_RX_status,w
+  1096  00AD  1D03               	btfss	3,2
+  1097  00AE  28BB               	goto	l940
+  1098  00AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1099  00B0  1303               	bcf	3,6	;RP1=0, select bank0
+  1100  00B1  1D86               	btfss	6,3	;volatile
+  1101  00B2  28BB               	goto	l940
+  1102                           
+  1103                           ;ir_rx.h: 83: demodulatedValue = 0;
+  1104  00B3  3000               	movlw	0
+  1105  00B4  00B5               	movwf	_demodulatedValue+3
+  1106  00B5  3000               	movlw	0
+  1107  00B6  00B4               	movwf	_demodulatedValue+2
+  1108  00B7  3000               	movlw	0
+  1109  00B8  00B3               	movwf	_demodulatedValue+1
+  1110  00B9  3000               	movlw	0
+  1111  00BA  00B2               	movwf	_demodulatedValue
+  1112  00BB                     l940:	
+  1113                           
+  1114                           ;ir_rx.h: 84: }
+  1115                           ;ir_rx.h: 86: if(RX_status == 0){
+  1116  00BB  0878               	movf	_RX_status,w
+  1117  00BC  1D03               	btfss	3,2
+  1118  00BD  28D8               	goto	l944
+  1119                           
+  1120                           ;ir_rx.h: 88: unsigned char fallTime = IR_GetStateDuration(0);
+  1121  00BE  3000               	movlw	0
+  1122  00BF  118A  21FE  118A   	fcall	_IR_GetStateDuration
+  1123  00C2  00F7               	movwf	??_IR_Detect
+  1124  00C3  0877               	movf	??_IR_Detect,w
+  1125  00C4  1283               	bcf	3,5	;RP0=0, select bank0
+  1126  00C5  1303               	bcf	3,6	;RP1=0, select bank0
+  1127  00C6  00A4               	movwf	IR_Detect@fallTime
+  1128                           
+  1129                           ;ir_rx.h: 89: unsigned char riseTime = IR_GetStateDuration(1);
+  1130  00C7  3001               	movlw	1
+  1131  00C8  118A  21FE  118A   	fcall	_IR_GetStateDuration
+  1132  00CB  00F7               	movwf	??_IR_Detect
+  1133  00CC  0877               	movf	??_IR_Detect,w
+  1134  00CD  1283               	bcf	3,5	;RP0=0, select bank0
+  1135  00CE  1303               	bcf	3,6	;RP1=0, select bank0
+  1136  00CF  00A5               	movwf	IR_Detect@riseTime
+  1137                           
+  1138                           ;ir_rx.h: 91: IR_Demodulate(fallTime, riseTime);
+  1139  00D0  0825               	movf	IR_Detect@riseTime,w
+  1140  00D1  00F7               	movwf	??_IR_Detect
+  1141  00D2  0877               	movf	??_IR_Detect,w
+  1142  00D3  00F4               	movwf	IR_Demodulate@riseTime
+  1143  00D4  0824               	movf	IR_Detect@fallTime,w
+  1144  00D5  118A  2115  118A   	fcall	_IR_Demodulate
+  1145  00D8                     l944:	
+  1146                           
+  1147                           ;ir_rx.h: 92: }
+  1148                           ;ir_rx.h: 94: if(RX_status == 1){
+  1149  00D8  0378               	decf	_RX_status,w
+  1150  00D9  1D03               	btfss	3,2
+  1151  00DA  2909               	goto	l962
+  1152                           
+  1153                           ;ir_rx.h: 95: RA3 = 1;
+  1154  00DB  1283               	bcf	3,5	;RP0=0, select bank0
+  1155  00DC  1303               	bcf	3,6	;RP1=0, select bank0
+  1156  00DD  1585               	bsf	5,3	;volatile
+  1157                           
+  1158                           ;ir_rx.h: 97: for(bitCount = 0 ; RX_status == 1 && bitCount < 32 ; ++bitCount){
+  1159  00DE  01F9               	clrf	_bitCount
+  1160  00DF  28FE               	goto	l954
+  1161  00E0                     l950:	
+  1162                           
+  1163                           ;ir_rx.h: 98: unsigned char fallTime = IR_GetStateDuration(0);
+  1164  00E0  3000               	movlw	0
+  1165  00E1  118A  21FE  118A   	fcall	_IR_GetStateDuration
+  1166  00E4  00F7               	movwf	??_IR_Detect
+  1167  00E5  0877               	movf	??_IR_Detect,w
+  1168  00E6  1283               	bcf	3,5	;RP0=0, select bank0
+  1169  00E7  1303               	bcf	3,6	;RP1=0, select bank0
+  1170  00E8  00A6               	movwf	IR_Detect@fallTime_70
+  1171                           
+  1172                           ;ir_rx.h: 99: unsigned char riseTime = IR_GetStateDuration(1);
+  1173  00E9  3001               	movlw	1
+  1174  00EA  118A  21FE  118A   	fcall	_IR_GetStateDuration
+  1175  00ED  00F7               	movwf	??_IR_Detect
+  1176  00EE  0877               	movf	??_IR_Detect,w
+  1177  00EF  1283               	bcf	3,5	;RP0=0, select bank0
+  1178  00F0  1303               	bcf	3,6	;RP1=0, select bank0
+  1179  00F1  00A7               	movwf	IR_Detect@riseTime_71
+  1180                           
+  1181                           ;ir_rx.h: 101: IR_Demodulate(fallTime, riseTime);
+  1182  00F2  0827               	movf	IR_Detect@riseTime_71,w
+  1183  00F3  00F7               	movwf	??_IR_Detect
+  1184  00F4  0877               	movf	??_IR_Detect,w
+  1185  00F5  00F4               	movwf	IR_Demodulate@riseTime
+  1186  00F6  0826               	movf	IR_Detect@fallTime_70,w
+  1187  00F7  118A  2115  118A   	fcall	_IR_Demodulate
+  1188  00FA  3001               	movlw	1
+  1189  00FB  00F7               	movwf	??_IR_Detect
+  1190  00FC  0877               	movf	??_IR_Detect,w
+  1191  00FD  07F9               	addwf	_bitCount,f
+  1192  00FE                     l954:	
+  1193  00FE  0378               	decf	_RX_status,w
+  1194  00FF  1D03               	btfss	3,2
+  1195  0100  2905               	goto	l958
+  1196  0101  3020               	movlw	32
+  1197  0102  0279               	subwf	_bitCount,w
+  1198  0103  1C03               	skipc
+  1199  0104  28E0               	goto	l950
+  1200  0105                     l958:	
+  1201                           
+  1202                           ;ir_rx.h: 102: }
+  1203                           ;ir_rx.h: 104: if(bitCount == 32){
+  1204  0105  3020               	movlw	32
+  1205  0106  0679               	xorwf	_bitCount,w
+  1206  0107  1903               	btfsc	3,2
+  1207                           
+  1208                           ;ir_rx.h: 106: RX_status = 0;
+  1209  0108  01F8               	clrf	_RX_status
+  1210  0109                     l962:	
+  1211                           
+  1212                           ;ir_rx.h: 107: }
+  1213                           ;ir_rx.h: 108: }
+  1214                           ;ir_rx.h: 110: RA3 = 0;
+  1215  0109  1283               	bcf	3,5	;RP0=0, select bank0
+  1216  010A  1303               	bcf	3,6	;RP1=0, select bank0
+  1217  010B  1185               	bcf	5,3	;volatile
+  1218                           
+  1219                           ;ir_rx.h: 112: return demodulatedValue;
+  1220  010C  0835               	movf	_demodulatedValue+3,w
+  1221  010D  00A3               	movwf	?_IR_Detect+3
+  1222  010E  0834               	movf	_demodulatedValue+2,w
+  1223  010F  00A2               	movwf	?_IR_Detect+2
+  1224  0110  0833               	movf	_demodulatedValue+1,w
+  1225  0111  00A1               	movwf	?_IR_Detect+1
+  1226  0112  0832               	movf	_demodulatedValue,w
+  1227  0113  00A0               	movwf	?_IR_Detect
+  1228  0114  0008               	return
+  1229  0115                     __end_of_IR_Detect:	
+  1230                           
+  1231                           	psect	text6
+  1232  01FE                     __ptext6:	
+  1233 ;; *************** function _IR_GetStateDuration *****************
+  1234 ;; Defined at:
+  1235 ;;		line 36 in file "_inc/ir_rx.h"
+  1236 ;; Parameters:    Size  Location     Type
+  1237 ;;  state           1    wreg     unsigned char 
+  1238 ;; Auto vars:     Size  Location     Type
+  1239 ;;  state           1    5[COMMON] unsigned char 
+  1240 ;; Return value:  Size  Location     Type
+  1241 ;;                  1    wreg      unsigned char 
+  1242 ;; Registers used:
+  1243 ;;		wreg, status,2, status,0, pclath, cstack
+  1244 ;; Tracked objects:
+  1245 ;;		On entry : 0/0
+  1246 ;;		On exit  : 0/0
+  1247 ;;		Unchanged: 0/0
+  1248 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1249 ;;      Params:         0       0       0       0       0
+  1250 ;;      Locals:         1       0       0       0       0
+  1251 ;;      Temps:          0       0       0       0       0
+  1252 ;;      Totals:         1       0       0       0       0
+  1253 ;;Total ram usage:        1 bytes
+  1254 ;; Hardware stack levels used:    1
+  1255 ;; Hardware stack levels required when called:    3
+  1256 ;; This function calls:
+  1257 ;;		_getTMR0
+  1258 ;;		_setTMR0
+  1259 ;; This function is called by:
+  1260 ;;		_IR_Detect
+  1261 ;; This function uses a non-reentrant model
+  1262 ;;
+  1263                           
+  1264                           
+  1265                           ;psect for function _IR_GetStateDuration
+  1266  01FE                     _IR_GetStateDuration:	
+  1267                           
+  1268                           ;incstack = 0
+  1269                           ; Regs used in _IR_GetStateDuration: [wreg+status,2+status,0+pclath+cstack]
+  1270                           ;IR_GetStateDuration@state stored from wreg
+  1271  01FE  00F5               	movwf	IR_GetStateDuration@state
+  1272                           
+  1273                           ;ir_rx.h: 37: setTMR0(0);
+  1274  01FF  3000               	movlw	0
+  1275  0200  118A  221E  118A   	fcall	_setTMR0
+  1276  0203                     l878:	
+  1277                           ;ir_rx.h: 39: while(RB3 == state){}
+  1278                           
+  1279  0203  3000               	movlw	0
+  1280  0204  1283               	bcf	3,5	;RP0=0, select bank0
+  1281  0205  1303               	bcf	3,6	;RP1=0, select bank0
+  1282  0206  1986               	btfsc	6,3	;volatile
+  1283  0207  3001               	movlw	1
+  1284  0208  0675               	xorwf	IR_GetStateDuration@state,w
+  1285  0209  1903               	skipnz
+  1286  020A  2A03               	goto	l878
+  1287                           
+  1288                           ;ir_rx.h: 41: return getTMR0();
+  1289  020B  118A  2232         	fcall	_getTMR0
+  1290  020D  0008               	return
+  1291  020E                     __end_of_IR_GetStateDuration:	
+  1292                           
+  1293                           	psect	text7
+  1294  021E                     __ptext7:	
+  1295 ;; *************** function _setTMR0 *****************
+  1296 ;; Defined at:
+  1297 ;;		line 28 in file "_src/tmr0.c"
+  1298 ;; Parameters:    Size  Location     Type
+  1299 ;;  value           1    wreg     unsigned char 
+  1300 ;; Auto vars:     Size  Location     Type
+  1301 ;;  value           1    4[COMMON] unsigned char 
+  1302 ;; Return value:  Size  Location     Type
+  1303 ;;                  1    wreg      void 
+  1304 ;; Registers used:
+  1305 ;;		wreg, status,2, status,0, pclath, cstack
+  1306 ;; Tracked objects:
+  1307 ;;		On entry : 0/0
+  1308 ;;		On exit  : 0/0
+  1309 ;;		Unchanged: 0/0
+  1310 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1311 ;;      Params:         0       0       0       0       0
+  1312 ;;      Locals:         1       0       0       0       0
+  1313 ;;      Temps:          0       0       0       0       0
+  1314 ;;      Totals:         1       0       0       0       0
+  1315 ;;Total ram usage:        1 bytes
+  1316 ;; Hardware stack levels used:    1
+  1317 ;; Hardware stack levels required when called:    2
+  1318 ;; This function calls:
+  1319 ;;		_TMR0_SetPrescaler
+  1320 ;; This function is called by:
+  1321 ;;		_IR_GetStateDuration
+  1322 ;; This function uses a non-reentrant model
+  1323 ;;
+  1324                           
+  1325                           
+  1326                           ;psect for function _setTMR0
+  1327  021E                     _setTMR0:	
+  1328                           
+  1329                           ;incstack = 0
+  1330                           ; Regs used in _setTMR0: [wreg+status,2+status,0+pclath+cstack]
+  1331                           ;setTMR0@value stored from wreg
+  1332  021E  00F4               	movwf	setTMR0@value
+  1333                           
+  1334                           ;tmr0.c: 29: TMR0 = value;
+  1335  021F  0874               	movf	setTMR0@value,w
+  1336  0220  1283               	bcf	3,5	;RP0=0, select bank0
+  1337  0221  1303               	bcf	3,6	;RP1=0, select bank0
+  1338  0222  0081               	movwf	1	;volatile
+  1339                           
+  1340                           ;tmr0.c: 30: TMR0_SetPrescaler();
+  1341  0223  118A  222C         	fcall	_TMR0_SetPrescaler
+  1342  0225  0008               	return
+  1343  0226                     __end_of_setTMR0:	
+  1344                           ;tmr0.c: 32: return;
+  1345                           
+  1346                           
+  1347                           	psect	text8
+  1348  022C                     __ptext8:	
+  1349 ;; *************** function _TMR0_SetPrescaler *****************
+  1350 ;; Defined at:
+  1351 ;;		line 7 in file "_src/tmr0.c"
+  1352 ;; Parameters:    Size  Location     Type
+  1353 ;;		None
+  1354 ;; Auto vars:     Size  Location     Type
+  1355 ;;		None
+  1356 ;; Return value:  Size  Location     Type
+  1357 ;;                  1    wreg      void 
+  1358 ;; Registers used:
+  1359 ;;		None
+  1360 ;; Tracked objects:
+  1361 ;;		On entry : 0/0
+  1362 ;;		On exit  : 0/0
+  1363 ;;		Unchanged: 0/0
+  1364 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1365 ;;      Params:         0       0       0       0       0
+  1366 ;;      Locals:         0       0       0       0       0
+  1367 ;;      Temps:          0       0       0       0       0
+  1368 ;;      Totals:         0       0       0       0       0
+  1369 ;;Total ram usage:        0 bytes
+  1370 ;; Hardware stack levels used:    1
+  1371 ;; Hardware stack levels required when called:    1
+  1372 ;; This function calls:
+  1373 ;;		Nothing
+  1374 ;; This function is called by:
+  1375 ;;		_TMR0_Init
+  1376 ;;		_setTMR0
+  1377 ;; This function uses a non-reentrant model
+  1378 ;;
+  1379                           
+  1380                           
+  1381                           ;psect for function _TMR0_SetPrescaler
+  1382  022C                     _TMR0_SetPrescaler:	
+  1383                           
+  1384                           ;tmr0.c: 8: PS2 = 1; PS1 = 0; PS0 = 1;
+  1385                           
+  1386                           ;incstack = 0
+  1387                           ; Regs used in _TMR0_SetPrescaler: []
+  1388  022C  1683               	bsf	3,5	;RP0=1, select bank1
+  1389  022D  1303               	bcf	3,6	;RP1=0, select bank1
+  1390  022E  1501               	bsf	1,2	;volatile
+  1391  022F  1081               	bcf	1,1	;volatile
+  1392  0230  1401               	bsf	1,0	;volatile
+  1393  0231  0008               	return
+  1394  0232                     __end_of_TMR0_SetPrescaler:	
+  1395                           
+  1396                           	psect	text9
+  1397  0232                     __ptext9:	
+  1398 ;; *************** function _getTMR0 *****************
+  1399 ;; Defined at:
+  1400 ;;		line 24 in file "_src/tmr0.c"
+  1401 ;; Parameters:    Size  Location     Type
+  1402 ;;		None
+  1403 ;; Auto vars:     Size  Location     Type
+  1404 ;;		None
+  1405 ;; Return value:  Size  Location     Type
+  1406 ;;                  1    wreg      unsigned char 
+  1407 ;; Registers used:
+  1408 ;;		wreg
+  1409 ;; Tracked objects:
+  1410 ;;		On entry : 0/0
+  1411 ;;		On exit  : 0/0
+  1412 ;;		Unchanged: 0/0
+  1413 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1414 ;;      Params:         0       0       0       0       0
+  1415 ;;      Locals:         0       0       0       0       0
+  1416 ;;      Temps:          0       0       0       0       0
+  1417 ;;      Totals:         0       0       0       0       0
+  1418 ;;Total ram usage:        0 bytes
+  1419 ;; Hardware stack levels used:    1
+  1420 ;; Hardware stack levels required when called:    1
+  1421 ;; This function calls:
+  1422 ;;		Nothing
+  1423 ;; This function is called by:
+  1424 ;;		_IR_GetStateDuration
+  1425 ;; This function uses a non-reentrant model
+  1426 ;;
+  1427                           
+  1428                           
+  1429                           ;psect for function _getTMR0
+  1430  0232                     _getTMR0:	
+  1431                           
+  1432                           ;tmr0.c: 25: return TMR0;
+  1433                           
+  1434                           ;incstack = 0
+  1435                           ; Regs used in _getTMR0: [wreg]
+  1436  0232  1283               	bcf	3,5	;RP0=0, select bank0
+  1437  0233  1303               	bcf	3,6	;RP1=0, select bank0
+  1438  0234  0801               	movf	1,w	;volatile
+  1439  0235  0008               	return
+  1440  0236                     __end_of_getTMR0:	
+  1441                           
+  1442                           	psect	text10
+  1443  0115                     __ptext10:	
+  1444 ;; *************** function _IR_Demodulate *****************
+  1445 ;; Defined at:
+  1446 ;;		line 45 in file "_inc/ir_rx.h"
+  1447 ;; Parameters:    Size  Location     Type
+  1448 ;;  fallTime        1    wreg     unsigned char 
+  1449 ;;  riseTime        1    4[COMMON] unsigned char 
+  1450 ;; Auto vars:     Size  Location     Type
+  1451 ;;  fallTime        1    6[COMMON] unsigned char 
+  1452 ;; Return value:  Size  Location     Type
+  1453 ;;                  1    wreg      void 
+  1454 ;; Registers used:
+  1455 ;;		wreg, status,2, status,0
+  1456 ;; Tracked objects:
+  1457 ;;		On entry : 0/0
+  1458 ;;		On exit  : 0/0
+  1459 ;;		Unchanged: 0/0
+  1460 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1461 ;;      Params:         1       0       0       0       0
+  1462 ;;      Locals:         1       0       0       0       0
+  1463 ;;      Temps:          1       0       0       0       0
+  1464 ;;      Totals:         3       0       0       0       0
+  1465 ;;Total ram usage:        3 bytes
+  1466 ;; Hardware stack levels used:    1
+  1467 ;; Hardware stack levels required when called:    1
+  1468 ;; This function calls:
+  1469 ;;		Nothing
+  1470 ;; This function is called by:
+  1471 ;;		_IR_Detect
+  1472 ;; This function uses a non-reentrant model
+  1473 ;;
+  1474                           
+  1475                           
+  1476                           ;psect for function _IR_Demodulate
+  1477  0115                     _IR_Demodulate:	
+  1478                           
+  1479                           ;incstack = 0
+  1480                           ; Regs used in _IR_Demodulate: [wreg+status,2+status,0]
+  1481                           ;IR_Demodulate@fallTime stored from wreg
+  1482  0115  00F6               	movwf	IR_Demodulate@fallTime
+  1483                           
+  1484                           ;ir_rx.h: 54: if(RX_status == 0){
+  1485  0116  0878               	movf	_RX_status,w
+  1486  0117  1D03               	btfss	3,2
+  1487  0118  292C               	goto	l896
+  1488                           
+  1489                           ;ir_rx.h: 55: if((fallTime >= 190 && fallTime <= 230) && (riseTime >= 190 && riseTime <=
+      +                           230)){
+  1490  0119  30BE               	movlw	190
+  1491  011A  0276               	subwf	IR_Demodulate@fallTime,w
+  1492  011B  1C03               	skipc
+  1493  011C  0008               	return
+  1494  011D  30E7               	movlw	231
+  1495  011E  0276               	subwf	IR_Demodulate@fallTime,w
+  1496  011F  1803               	skipnc
+  1497  0120  0008               	return
+  1498  0121  30BE               	movlw	190
+  1499  0122  0274               	subwf	IR_Demodulate@riseTime,w
+  1500  0123  1C03               	skipc
+  1501  0124  0008               	return
+  1502  0125  30E7               	movlw	231
+  1503  0126  0274               	subwf	IR_Demodulate@riseTime,w
+  1504  0127  1803               	skipnc
+  1505  0128  0008               	return
+  1506                           
+  1507                           ;ir_rx.h: 56: RX_status = 1;
+  1508  0129  01F8               	clrf	_RX_status
+  1509  012A  0AF8               	incf	_RX_status,f
+  1510                           
+  1511                           ;ir_rx.h: 57: }
+  1512                           ;ir_rx.h: 58: }
+  1513  012B  0008               	return
+  1514  012C                     l896:	
+  1515                           
+  1516                           ;ir_rx.h: 59: else{
+  1517                           ;ir_rx.h: 60: if((fallTime >= 20 && fallTime <= 35) && (riseTime >= 20 && riseTime <= 35
+      +                          )){
+  1518  012C  3014               	movlw	20
+  1519  012D  0276               	subwf	IR_Demodulate@fallTime,w
+  1520  012E  1C03               	skipc
+  1521  012F  294C               	goto	l908
+  1522  0130  3024               	movlw	36
+  1523  0131  0276               	subwf	IR_Demodulate@fallTime,w
+  1524  0132  1803               	skipnc
+  1525  0133  294C               	goto	l908
+  1526  0134  3014               	movlw	20
+  1527  0135  0274               	subwf	IR_Demodulate@riseTime,w
+  1528  0136  1C03               	skipc
+  1529  0137  294C               	goto	l908
+  1530  0138  3024               	movlw	36
+  1531  0139  0274               	subwf	IR_Demodulate@riseTime,w
+  1532  013A  1803               	skipnc
+  1533  013B  294C               	goto	l908
+  1534                           
+  1535                           ;ir_rx.h: 62: if(bitCount < 32 - 1){
+  1536  013C  301F               	movlw	31
+  1537  013D  0279               	subwf	_bitCount,w
+  1538  013E  1803               	skipnc
+  1539  013F  0008               	return
+  1540                           
+  1541                           ;ir_rx.h: 63: demodulatedValue <<= 1;
+  1542  0140  3001               	movlw	1
+  1543  0141  00F5               	movwf	??_IR_Demodulate
+  1544  0142                     u535:	
+  1545  0142  1003               	clrc
+  1546  0143  1283               	bcf	3,5	;RP0=0, select bank0
+  1547  0144  1303               	bcf	3,6	;RP1=0, select bank0
+  1548  0145  0DB2               	rlf	_demodulatedValue,f
+  1549  0146  0DB3               	rlf	_demodulatedValue+1,f
+  1550  0147  0DB4               	rlf	_demodulatedValue+2,f
+  1551  0148  0DB5               	rlf	_demodulatedValue+3,f
+  1552  0149  0BF5               	decfsz	??_IR_Demodulate,f
+  1553  014A  2942               	goto	u535
+  1554                           
+  1555                           ;ir_rx.h: 64: }
+  1556                           ;ir_rx.h: 65: }
+  1557  014B  0008               	return
+  1558  014C                     l908:	
+  1559                           
+  1560                           ;ir_rx.h: 66: else if((fallTime >= 20 && fallTime <= 35) && (riseTime >= 70 && riseTime 
+      +                          <= 90)){
+  1561  014C  3014               	movlw	20
+  1562  014D  0276               	subwf	IR_Demodulate@fallTime,w
+  1563  014E  1C03               	skipc
+  1564  014F  296D               	goto	l922
+  1565  0150  3024               	movlw	36
+  1566  0151  0276               	subwf	IR_Demodulate@fallTime,w
+  1567  0152  1803               	skipnc
+  1568  0153  296D               	goto	l922
+  1569  0154  3046               	movlw	70
+  1570  0155  0274               	subwf	IR_Demodulate@riseTime,w
+  1571  0156  1C03               	skipc
+  1572  0157  296D               	goto	l922
+  1573  0158  305B               	movlw	91
+  1574  0159  0274               	subwf	IR_Demodulate@riseTime,w
+  1575  015A  1803               	skipnc
+  1576  015B  296D               	goto	l922
+  1577                           
+  1578                           ;ir_rx.h: 68: demodulatedValue |= 1;
+  1579  015C  1283               	bcf	3,5	;RP0=0, select bank0
+  1580  015D  1303               	bcf	3,6	;RP1=0, select bank0
+  1581  015E  1432               	bsf	_demodulatedValue,0
+  1582                           
+  1583                           ;ir_rx.h: 70: if(bitCount < 32 - 1){
+  1584  015F  301F               	movlw	31
+  1585  0160  0279               	subwf	_bitCount,w
+  1586  0161  1803               	skipnc
+  1587  0162  0008               	return
+  1588                           
+  1589                           ;ir_rx.h: 71: demodulatedValue <<= 1;
+  1590  0163  3001               	movlw	1
+  1591  0164  00F5               	movwf	??_IR_Demodulate
+  1592  0165                     u595:	
+  1593  0165  1003               	clrc
+  1594  0166  0DB2               	rlf	_demodulatedValue,f
+  1595  0167  0DB3               	rlf	_demodulatedValue+1,f
+  1596  0168  0DB4               	rlf	_demodulatedValue+2,f
+  1597  0169  0DB5               	rlf	_demodulatedValue+3,f
+  1598  016A  0BF5               	decfsz	??_IR_Demodulate,f
+  1599  016B  2965               	goto	u595
+  1600                           
+  1601                           ;ir_rx.h: 72: }
+  1602                           ;ir_rx.h: 73: }
+  1603  016C  0008               	return
+  1604  016D                     l922:	
+  1605                           
+  1606                           ;ir_rx.h: 74: else{
+  1607                           ;ir_rx.h: 75: RX_status = 0;
+  1608  016D  01F8               	clrf	_RX_status
+  1609  016E  0008               	return
+  1610  016F                     __end_of_IR_Demodulate:	
+  1611                           
+  1612                           	psect	text11
+  1613  020E                     __ptext11:	
+  1614 ;; *************** function _myISR *****************
+  1615 ;; Defined at:
+  1616 ;;		line 10 in file "main.c"
+  1617 ;; Parameters:    Size  Location     Type
+  1618 ;;		None
+  1619 ;; Auto vars:     Size  Location     Type
+  1620 ;;		None
+  1621 ;; Return value:  Size  Location     Type
+  1622 ;;                  1    wreg      void 
+  1623 ;; Registers used:
+  1624 ;;		status,2
+  1625 ;; Tracked objects:
+  1626 ;;		On entry : 0/0
+  1627 ;;		On exit  : 0/0
+  1628 ;;		Unchanged: 0/0
+  1629 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1630 ;;      Params:         0       0       0       0       0
+  1631 ;;      Locals:         0       0       0       0       0
+  1632 ;;      Temps:          4       0       0       0       0
+  1633 ;;      Totals:         4       0       0       0       0
+  1634 ;;Total ram usage:        4 bytes
+  1635 ;; Hardware stack levels used:    1
+  1636 ;; This function calls:
+  1637 ;;		Nothing
+  1638 ;; This function is called by:
+  1639 ;;		Interrupt level 1
+  1640 ;; This function uses a non-reentrant model
+  1641 ;;
+  1642                           
+  1643                           
+  1644                           ;psect for function _myISR
+  1645  020E                     _myISR:	
+  1646                           
+  1647                           ;main.c: 11: if(TMR0IE && TMR0IF){
+  1648  020E  1A8B               	btfsc	11,5	;volatile
+  1649  020F  1D0B               	btfss	11,2	;volatile
+  1650  0210  2A13               	goto	i1l72
+  1651                           
+  1652                           ;main.c: 12: TMR0IF = 0;
+  1653  0211  110B               	bcf	11,2	;volatile
+  1654                           
+  1655                           ;main.c: 14: RX_status = 0;
+  1656  0212  01F8               	clrf	_RX_status
+  1657  0213                     i1l72:	
+  1658  0213  0873               	movf	??_myISR+3,w
+  1659  0214  00FF               	movwf	127
+  1660  0215  0872               	movf	??_myISR+2,w
+  1661  0216  008A               	movwf	10
+  1662  0217  0871               	movf	??_myISR+1,w
+  1663  0218  0084               	movwf	4
+  1664  0219  0E70               	swapf	??_myISR^(0+-128),w
+  1665  021A  0083               	movwf	3
+  1666  021B  0EFE               	swapf	126,f
+  1667  021C  0E7E               	swapf	126,w
+  1668  021D  0009               	retfie
+  1669  021E                     __end_of_myISR:	
+  1670  007E                     btemp	set	126	;btemp
+  1671  007E                     wtemp0	set	126
+  1672                           
+  1673                           	psect	intentry
+  1674  0004                     __pintentry:	
+  1675                           ;incstack = 0
+  1676                           ; Regs used in _myISR: [status,2]
+  1677                           
+  1678  0004                     interrupt_function:	
+  1679  007E                     saved_w	set	btemp
+  1680  0004  00FE               	movwf	btemp
+  1681  0005  0E03               	swapf	3,w
+  1682  0006  00F0               	movwf	??_myISR
+  1683  0007  0804               	movf	4,w
+  1684  0008  00F1               	movwf	??_myISR+1
+  1685  0009  080A               	movf	10,w
+  1686  000A  00F2               	movwf	??_myISR+2
+  1687  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1688  000C  1303               	bcf	3,6	;RP1=0, select bank0
+  1689  000D  087F               	movf	btemp+1,w
+  1690  000E  00F3               	movwf	??_myISR+3
+  1691  000F  118A  2A0E         	ljmp	_myISR
+
+
+Data Sizes:
+    Strings     28
+    Constant    40
+    Data        0
+    BSS         6
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      8      10
+    BANK0            80     18      22
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_IR_Detect
+    _main->_PWM_SetDutyCycle
+    _PWM_Init->_PWM_SetDutyCycle
+    _IR_Detect->_IR_Demodulate
+    _IR_GetStateDuration->_setTMR0
+
+Critical Paths under _myISR in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_IR_Detect
+
+Critical Paths under _myISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _myISR in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _myISR in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _myISR in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                10    10      0    1132
+                                              8 BANK0     10    10      0
+                          _IR_Detect
+                           _PWM_Init
+                   _PWM_SetDutyCycle
+                          _TMR0_Init
+ ---------------------------------------------------------------------------------
+ (1) _TMR0_Init                                            0     0      0       0
+                  _TMR0_SetPrescaler
+ ---------------------------------------------------------------------------------
+ (1) _PWM_Init                                             0     0      0     256
+                   _PWM_SetDutyCycle
+                      _PWM_SetPeriod
+ ---------------------------------------------------------------------------------
+ (2) _PWM_SetPeriod                                        1     1      0      22
+                                              4 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _PWM_SetDutyCycle                                     4     2      2     234
+                                              4 COMMON     4     2      2
+ ---------------------------------------------------------------------------------
+ (1) _IR_Detect                                            9     5      4     506
+                                              7 COMMON     1     1      0
+                                              0 BANK0      8     4      4
+                      _IR_Demodulate
+                _IR_GetStateDuration
+ ---------------------------------------------------------------------------------
+ (2) _IR_GetStateDuration                                  1     1      0      44
+                                              5 COMMON     1     1      0
+                            _getTMR0
+                            _setTMR0
+ ---------------------------------------------------------------------------------
+ (3) _setTMR0                                              1     1      0      22
+                                              4 COMMON     1     1      0
+                  _TMR0_SetPrescaler
+ ---------------------------------------------------------------------------------
+ (2) _TMR0_SetPrescaler                                    0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _getTMR0                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _IR_Demodulate                                        3     2      1     370
+                                              4 COMMON     3     2      1
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _myISR                                                4     4      0       0
+                                              0 COMMON     4     4      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _IR_Detect
+     _IR_Demodulate
+     _IR_GetStateDuration
+       _getTMR0
+       _setTMR0
+         _TMR0_SetPrescaler
+   _PWM_Init
+     _PWM_SetDutyCycle
+     _PWM_SetPeriod
+   _PWM_SetDutyCycle
+   _TMR0_Init
+     _TMR0_SetPrescaler
+
+ _myISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      8       A       1       71.4%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0      20       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50     12      16       5       27.5%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0      20      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.40 build -251452761 
+Symbol Table                                                                                   Wed Aug 23 11:50:10 2017
+
+          ?_TMR0_SetPrescaler 0070                             pc 0002                   __CFG_CP$OFF 0000  
+                          fsr 0004           ??_TMR0_SetPrescaler 0074        __size_of_PWM_SetPeriod 0006  
+                         l922 016D                           l908 014C                           l940 00BB  
+                         l950 00E0                           l944 00D8                           l954 00FE  
+                         l962 0109                           l878 0203                           l958 0105  
+                         l982 01D0                           l896 012C                           _GIE 005F  
+                         _RA2 002A                           _RA3 002B                           _RB3 0033  
+                         _PS0 0408                           _PR2 0092                           _PS1 0409  
+                         _PS2 040A                  __CFG_CPD$OFF 0000                           u710 01D8  
+                         u535 0142                           u670 01E1                           u735 0077  
+                         _PSA 040B                           u690 01CD                           u595 0165  
+                         u755 009B                           u684 01E2                           fsr0 0004  
+                __CFG_IESO$ON 0000                  __CFG_FOSC$HS 0000                  __CFG_LVP$OFF 0000  
+                        l1002 004A                          l1006 0035                          STR_1 01AE  
+                        STR_2 019D                          _BRGH 04C2                          _T0CS 040D  
+                        i1l72 0213               __end_of_SAMSUNG 019D                          _TMR0 0001  
+                        _SPEN 00C7                          _TRMT 04C1                          _TXEN 04C5  
+                        _SYNC 04C4                  __CFG_WRT$OFF 0000                 __CFG_FCMEN$ON 0000  
+                        _main 001C     __end_of_TMR0_SetPrescaler 0232                          btemp 007E  
+                        start 0011                 __CFG_MCLRE$ON 0000      IR_GetStateDuration@state 0075  
+                       ?_main 0070                         _CCP1X 00BD                         _CCP1Y 00BC  
+               __CFG_WDTE$OFF 0000                         _ANSEL 009B                         _SPBRG 0099  
+                       _PORTA 0005                         _PORTB 0006                         _TRISA 0085  
+                       _TRISB 0086                         _TXREG 0019               __end_of_getTMR0 0236  
+              __CFG_CCPMX$RB0 0000            __size_of_IR_Detect 0069            __size_of_TMR0_Init 0011  
+                       _myISR 020E               __end_of_setTMR0 0226                __CFG_BOREN$OFF 0000  
+                       pclath 000A              __end_of_PWM_Init 01DC                         status 0003  
+                       wtemp0 007E                 _PWM_SetPeriod 0226               __initialization 0013  
+                __end_of_main 00AC                        ??_main 0028                        ?_myISR 0070  
+                      _CCP1M2 00BA                        _CCP1M3 00BB                        _CCPR1L 0015  
+    __end_of_PWM_SetDutyCycle 01FE                ?_PWM_SetPeriod 0070         __end_of_IR_Demodulate 016F  
+                      _TMR0IE 005D                        _TMR0IF 005A                        _TMR2ON 0092  
+  __size_of_TMR0_SetPrescaler 0006                 main@dutyCycle 0030             IR_Detect@fallTime 0024  
+              __CFG_PWRTE$OFF 0000             __end_of_IR_Detect 0115             __end_of_TMR0_Init 01ED  
+ __end_of_IR_GetStateDuration 020E                     ??_getTMR0 0074                     ??_setTMR0 0074  
+           IR_Detect@riseTime 0025                        saved_w 007E         IR_Demodulate@fallTime 0076  
+     __end_of__initialization 0019                __pcstackCOMMON 0070                 __end_of_myISR 021E  
+       IR_Demodulate@riseTime 0074                     ?_PWM_Init 0070                       ??_myISR 0070  
+             ??_PWM_SetPeriod 0074                    __pbssBANK0 0032                    __pmaintext 001C  
+                  __pintentry 0004                    ??_PWM_Init 0078                       _T2CKPS0 0090  
+                     _T2CKPS1 0091                       _SAMSUNG 0195     PWM_SetDutyCycle@dutyCycle 0074  
+                  __stringtab 016F                       _getTMR0 0232                       __ptext1 01DC  
+                     __ptext2 01B9                       __ptext3 0226                       __ptext4 01ED  
+                     __ptext5 00AC                       __ptext6 01FE                       __ptext7 021E  
+                     __ptext8 022C                       __ptext9 0232             __end_of_hexpowers 0195  
+                     _setTMR0 021E                       main@val 002C          end_of_initialization 0019  
+           ?_PWM_SetDutyCycle 0074            ??_PWM_SetDutyCycle 0076                     _IR_Detect 00AC  
+                   _TMR0_Init 01DC                  setTMR0@value 0074          IR_Detect@fallTime_70 0026  
+                  ?_IR_Detect 0020                    ?_TMR0_Init 0070        __size_of_IR_Demodulate 005A  
+                   _RX_status 0078             __size_of_PWM_Init 0023  __size_of_IR_GetStateDuration 0010  
+         start_initialization 0013                   __pbssCOMMON 0078                     ___latbits 0001  
+               __pcstackBANK0 0020         __end_of_PWM_SetPeriod 022C                 _IR_Demodulate 0115  
+         PWM_SetPeriod@period 0074                   ??_IR_Detect 0077                      ?_getTMR0 0070  
+                 ??_TMR0_Init 0074                     __pstrings 016F                      ?_setTMR0 0070  
+                   _hexpowers 0175                __size_of_myISR 0010                ?_IR_Demodulate 0074  
+           interrupt_function 0004     __size_of_PWM_SetDutyCycle 0011                   __stringbase 0174  
+                    _PWM_Init 01B9           _IR_GetStateDuration 01FE            __end_of__stringtab 0175  
+            __size_of_getTMR0 0004          IR_Detect@riseTime_71 0027          ?_IR_GetStateDuration 0070  
+                    _bitCount 0079              __size_of_setTMR0 0008                      __ptext10 0115  
+                    __ptext11 020E               ??_IR_Demodulate 0075                 __size_of_main 0090  
+            _demodulatedValue 0032         ??_IR_GetStateDuration 0075                      intlevel1 0000  
+                   stringcode 016F              _PWM_SetDutyCycle 01ED                      stringdir 016F  
+                    stringtab 016F             _TMR0_SetPrescaler 022C  
