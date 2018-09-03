@@ -1,0 +1,611 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F876A ]
+[d frameptr 6 ]
+"51 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire/_libs/crc16.h
+[v __crc_ccitt_update _crc_ccitt_update `(ui  1 e 2 0 ]
+"6 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire/_libs/string.h
+[v _memcpy memcpy `(*.4uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+[v i1_sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+[v i1_isdigit isdigit `(b  1 e 0 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+[v i1___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+[v i1___lwmod __lwmod `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strchr.c
+[v _strchr strchr `(*.24uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcspn.c
+[v _strcspn strcspn `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strspn.c
+[v _strspn strspn `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strtok.c
+[v _strtok strtok `(*.4uc  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"8 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\lcd.h
+[v _LCD_set_port LCD_set_port `(v  1 e 1 0 ]
+"24
+[v _LCD_command LCD_command `(v  1 e 1 0 ]
+"40
+[v _LCD_set_cursor LCD_set_cursor `(v  1 e 1 0 ]
+"56
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"100
+[v _LCD_write_char LCD_write_char `(v  1 e 1 0 ]
+"115
+[v _LCD_write_string LCD_write_string `(v  1 e 1 0 ]
+"32 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _parse_id_value parse_id_value `(v  1 e 1 0 ]
+"38
+[v _SYST_Init SYST_Init `(v  1 e 1 0 ]
+"49
+[v _TMR1_Init TMR1_Init `(v  1 e 1 0 ]
+"58
+[v _global_isr global_isr `II(v  1 e 1 0 ]
+"79
+[v _main main `(v  1 e 1 0 ]
+"97 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v __calc_timer0_prescaler _calc_timer0_prescaler `(uc  1 s 1 _calc_timer0_prescaler ]
+"123
+[v _vw_setup vw_setup `(v  1 e 1 0 ]
+"157
+[v _vw_wait_tx vw_wait_tx `(v  1 e 1 0 ]
+"162
+[v _vw_tx_stop vw_tx_stop `(v  1 e 1 0 ]
+"168
+[v _vw_tx_start vw_tx_start `(v  1 e 1 0 ]
+"234
+[v _vw_crc vw_crc `(ui  1 e 2 0 ]
+"245
+[v _vw_symbol_6to4 vw_symbol_6to4 `(uc  1 e 1 0 ]
+"262
+[v _vw_pll vw_pll `(v  1 e 1 0 ]
+"348
+[v _vw_have_message vw_have_message `(uc  1 e 1 0 ]
+"353
+[v _vw_recv vw_recv `(uc  1 e 1 0 ]
+"382
+[v _vw_rx_start vw_rx_start `(v  1 e 1 0 ]
+"388
+[v _vw_isr_tmr0 vw_isr_tmr0 `(v  1 e 1 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f876a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"158
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"207
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S46 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+]
+"562
+[s S52 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S58 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+]
+[u S61 . 1 `S46 1 . 1 0 `S52 1 . 1 0 `S58 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES61  1 e 1 @16 ]
+"1119
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1188
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1237
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1952
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2220
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2254
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2268
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2270
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2282
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2284
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2286
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"2288
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"2290
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"2292
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"2370
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"2392
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2394
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2396
+[v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
+"2398
+[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
+"2400
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
+"2402
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"2420
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"2422
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+[v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
+"20 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _text text `[10]uc  1 e 10 0 ]
+"22
+[v _clockBuffer clockBuffer `VE[15]uc  1 e 15 0 ]
+"23
+[v _adcBuffer_0 adcBuffer_0 `VE[20]uc  1 e 20 0 ]
+"24
+[v _adcBuffer_1 adcBuffer_1 `VE[20]uc  1 e 20 0 ]
+"26
+[v _timerCounter timerCounter `VEuc  1 e 1 0 ]
+"27
+[v _HH HH `VEuc  1 e 1 0 ]
+"28
+[v _MM MM `VEuc  1 e 1 0 ]
+"29
+[v _SS SS `VEuc  1 e 1 0 ]
+"28 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v _vw_tx_len vw_tx_len `uc  1 s 1 vw_tx_len ]
+"29
+[v _vw_tx_index vw_tx_index `uc  1 s 1 vw_tx_index ]
+"30
+[v _vw_tx_header vw_tx_header `uc  1 s 1 vw_tx_header ]
+"32
+[v _vw_tx_sample vw_tx_sample `uc  1 s 1 vw_tx_sample ]
+"33
+[v _vw_tx_bit vw_tx_bit `uc  1 s 1 vw_tx_bit ]
+"34
+[v _vw_tx_enabled vw_tx_enabled `uc  1 s 1 vw_tx_enabled ]
+"36
+[v _vw_tmr0_value vw_tmr0_value `uc  1 s 1 vw_tmr0_value ]
+"41
+[v _vw_rx_done vw_rx_done `VEuc  1 s 1 vw_rx_done ]
+"42
+[v _vw_rx_bits vw_rx_bits `ui  1 s 2 vw_rx_bits ]
+"43
+[v _vw_rx_enabled vw_rx_enabled `uc  1 s 1 vw_rx_enabled ]
+"44
+[v _vw_rx_enabled_last vw_rx_enabled_last `uc  1 s 1 vw_rx_enabled_last ]
+"45
+[v _vw_rx_bit_count vw_rx_bit_count `uc  1 s 1 vw_rx_bit_count ]
+"46
+[v _vw_rx_count vw_rx_count `uc  1 s 1 vw_rx_count ]
+"47
+[v _vw_rx_len vw_rx_len `uc  1 s 1 vw_rx_len ]
+"49
+[v _vw_rx_sample vw_rx_sample `uc  1 s 1 vw_rx_sample ]
+"50
+[v _vw_rx_last_sample vw_rx_last_sample `uc  1 s 1 vw_rx_last_sample ]
+"51
+[v _vw_rx_active vw_rx_active `uc  1 s 1 vw_rx_active ]
+"53
+[v _vw_rx_inverted vw_rx_inverted `uc  1 s 1 vw_rx_inverted ]
+"77
+[v _vw_rx_pll_ramp vw_rx_pll_ramp `uc  1 s 1 vw_rx_pll_ramp ]
+"78
+[v _vw_rx_integrator vw_rx_integrator `uc  1 s 1 vw_rx_integrator ]
+"84
+[v _symbols symbols `DCC[16]uc  1 e 16 0 ]
+"92
+[v _vw_tx_buf_header vw_tx_buf_header `DCC[8]uc  1 e 8 0 ]
+"95
+[v _vw_tx_buf vw_tx_buf `X[20]uc  1 s 20 vw_tx_buf ]
+"79 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"98
+[v main@int_id int_id `i  1 a 2 47 ]
+"95
+[v main@value value `*.4uc  1 a 1 51 ]
+"94
+[v main@id id `*.4uc  1 a 1 50 ]
+"91
+[v main@len len `uc  1 a 1 49 ]
+"118
+} 0
+"123 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v _vw_setup vw_setup `(v  1 e 1 0 ]
+{
+"125
+[v vw_setup@prescaler_value prescaler_value `ui  1 a 2 43 ]
+"126
+[v vw_setup@prescaler_bits prescaler_bits `uc  1 a 1 42 ]
+"123
+[v vw_setup@brate brate `ui  1 p 2 37 ]
+"151
+} 0
+"97
+[v __calc_timer0_prescaler _calc_timer0_prescaler `(uc  1 s 1 _calc_timer0_prescaler ]
+{
+"101
+[v __calc_timer0_prescaler@aux_tmr0 aux_tmr0 `ui  1 a 2 34 ]
+"100
+[v __calc_timer0_prescaler@pindex pindex `uc  1 a 1 36 ]
+"97
+[v __calc_timer0_prescaler@brate brate `ui  1 p 2 21 ]
+[v __calc_timer0_prescaler@prescaler_value prescaler_value `*.4ui  1 p 1 23 ]
+[v __calc_timer0_prescaler@prescaler_bits prescaler_bits `*.4uc  1 p 1 24 ]
+[v __calc_timer0_prescaler@k_tmr0 k_tmr0 `*.4uc  1 p 1 25 ]
+"99
+[v __calc_timer0_prescaler@prescaler_factor prescaler_factor `DCC[9]ui  1 s 18 prescaler_factor ]
+"121
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"11
+[v ___aldiv@quotient quotient `l  1 a 4 17 ]
+"12
+[v ___aldiv@sign sign `uc  1 a 1 16 ]
+[v ___aldiv@counter counter `uc  1 a 1 15 ]
+"6
+[v ___aldiv@divisor divisor `l  1 p 4 6 ]
+[v ___aldiv@dividend dividend `l  1 p 4 10 ]
+"42
+} 0
+"382 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v _vw_rx_start vw_rx_start `(v  1 e 1 0 ]
+{
+"386
+} 0
+"353
+[v _vw_recv vw_recv `(uc  1 e 1 0 ]
+{
+[v vw_recv@buf buf `*.4uc  1 a 1 wreg ]
+"355
+[v vw_recv@rxlen rxlen `uc  1 a 1 27 ]
+"353
+[v vw_recv@buf buf `*.4uc  1 a 1 wreg ]
+[v vw_recv@len len `*.4uc  1 p 1 22 ]
+"358
+[v vw_recv@buf buf `*.4uc  1 a 1 26 ]
+"374
+} 0
+"234
+[v _vw_crc vw_crc `(ui  1 e 2 0 ]
+{
+[v vw_crc@ptr ptr `*.5uc  1 a 1 wreg ]
+"236
+[v vw_crc@crc crc `ui  1 a 2 20 ]
+"234
+[v vw_crc@ptr ptr `*.5uc  1 a 1 wreg ]
+[v vw_crc@count count `uc  1 p 1 16 ]
+"236
+[v vw_crc@ptr ptr `*.5uc  1 a 1 19 ]
+"241
+} 0
+"51 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire/_libs/crc16.h
+[v __crc_ccitt_update _crc_ccitt_update `(ui  1 e 2 0 ]
+{
+[v __crc_ccitt_update@crc crc `ui  1 p 2 0 ]
+[v __crc_ccitt_update@data data `uc  1 p 1 2 ]
+"59
+} 0
+"6 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire/_libs/string.h
+[v _memcpy memcpy `(*.4uc  1 e 1 0 ]
+{
+[v memcpy@dest dest `*.4uc  1 a 1 wreg ]
+[v memcpy@dest dest `*.4uc  1 a 1 wreg ]
+[v memcpy@src src `*.5uc  1 p 1 0 ]
+[v memcpy@n n `ui  1 p 2 1 ]
+[v memcpy@dest dest `*.4uc  1 a 1 6 ]
+"22
+} 0
+"348 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v _vw_have_message vw_have_message `(uc  1 e 1 0 ]
+{
+"351
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+"501
+[v sprintf@width width `i  1 a 2 30 ]
+"529
+[v sprintf@len len `ui  1 a 2 28 ]
+"530
+[v sprintf@cp cp `*.26DCCuc  1 a 2 26 ]
+"528
+[v sprintf@val val `ui  1 a 2 22 ]
+"499
+[v sprintf@c c `c  1 a 1 32 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 25 ]
+"506
+[v sprintf@prec prec `c  1 a 1 24 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 21 ]
+"492
+[v sprintf@sp sp `*.39uc  1 p 2 14 ]
+[v sprintf@f f `*.24DCCuc  1 p 1 16 ]
+"1541
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"32 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _parse_id_value parse_id_value `(v  1 e 1 0 ]
+{
+[v parse_id_value@str str `*.4uc  1 a 1 wreg ]
+[v parse_id_value@str str `*.4uc  1 a 1 wreg ]
+[v parse_id_value@id id `*.4*.4uc  1 p 1 14 ]
+[v parse_id_value@value value `*.4*.4uc  1 p 1 15 ]
+"34
+[v parse_id_value@str str `*.4uc  1 a 1 18 ]
+"36
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strtok.c
+[v _strtok strtok `(*.4uc  1 e 1 0 ]
+{
+[v strtok@s1 s1 `*.4uc  1 a 1 wreg ]
+[v strtok@s1 s1 `*.4uc  1 a 1 wreg ]
+[v strtok@s2 s2 `*.24DCCuc  1 p 1 10 ]
+"15
+[v strtok@sp sp `*.4uc  1 s 1 sp ]
+"18
+[v strtok@s1 s1 `*.4uc  1 a 1 13 ]
+"31
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strspn.c
+[v _strspn strspn `(ui  1 e 2 0 ]
+{
+[v strspn@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+"6
+[v strspn@i i `ui  1 a 2 7 ]
+"4
+[v strspn@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+[v strspn@s2 s2 `*.24DCCuc  1 p 1 3 ]
+"8
+[v strspn@s1 s1 `*.4DCCuc  1 a 1 9 ]
+"14
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcspn.c
+[v _strcspn strcspn `(ui  1 e 2 0 ]
+{
+[v strcspn@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+"6
+[v strcspn@i i `ui  1 a 2 7 ]
+"4
+[v strcspn@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+[v strcspn@s2 s2 `*.24DCCuc  1 p 1 3 ]
+"8
+[v strcspn@s1 s1 `*.4DCCuc  1 a 1 9 ]
+"14
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strchr.c
+[v _strchr strchr `(*.24uc  1 e 1 0 ]
+{
+[v strchr@ptr ptr `*.24DCCuc  1 a 1 wreg ]
+[v strchr@ptr ptr `*.24DCCuc  1 a 1 wreg ]
+[v strchr@chr chr `i  1 p 2 0 ]
+[v strchr@ptr ptr `*.24DCCuc  1 a 1 2 ]
+"11
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+{
+[v atoi@s s `*.4DCCuc  1 a 1 wreg ]
+"7
+[v atoi@a a `i  1 a 2 11 ]
+"8
+[v atoi@sign sign `uc  1 a 1 10 ]
+"5
+[v atoi@s s `*.4DCCuc  1 a 1 wreg ]
+[v atoi@s s `*.4DCCuc  1 a 1 13 ]
+"24
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"49 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _TMR1_Init TMR1_Init `(v  1 e 1 0 ]
+{
+"56
+} 0
+"38
+[v _SYST_Init SYST_Init `(v  1 e 1 0 ]
+{
+"47
+} 0
+"115 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\lcd.h
+[v _LCD_write_string LCD_write_string `(v  1 e 1 0 ]
+{
+"116
+[v LCD_write_string@j j `uc  1 a 1 6 ]
+"115
+[v LCD_write_string@str str `*.26uc  1 p 2 3 ]
+"120
+} 0
+"100
+[v _LCD_write_char LCD_write_char `(v  1 e 1 0 ]
+{
+[v LCD_write_char@c c `uc  1 a 1 wreg ]
+[v LCD_write_char@c c `uc  1 a 1 wreg ]
+[v LCD_write_char@c c `uc  1 a 1 2 ]
+"112
+} 0
+"40
+[v _LCD_set_cursor LCD_set_cursor `(v  1 e 1 0 ]
+{
+[v LCD_set_cursor@row row `uc  1 a 1 wreg ]
+"44
+[v LCD_set_cursor@ddram_address ddram_address `uc  1 a 1 6 ]
+"40
+[v LCD_set_cursor@row row `uc  1 a 1 wreg ]
+[v LCD_set_cursor@column column `uc  1 p 1 4 ]
+"42
+[v LCD_set_cursor@row row `uc  1 a 1 7 ]
+"53
+} 0
+"56
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"97
+} 0
+"24
+[v _LCD_command LCD_command `(v  1 e 1 0 ]
+{
+[v LCD_command@command command `uc  1 a 1 wreg ]
+[v LCD_command@command command `uc  1 a 1 wreg ]
+[v LCD_command@command command `uc  1 a 1 3 ]
+"30
+} 0
+"8
+[v _LCD_set_port LCD_set_port `(v  1 e 1 0 ]
+{
+[v LCD_set_port@value_4_bit value_4_bit `uc  1 a 1 wreg ]
+[v LCD_set_port@value_4_bit value_4_bit `uc  1 a 1 wreg ]
+"10
+[v LCD_set_port@value_4_bit value_4_bit `uc  1 a 1 0 ]
+"21
+} 0
+"58 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\main.c
+[v _global_isr global_isr `II(v  1 e 1 0 ]
+{
+"77
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+[v i1_sprintf sprintf `(i  1 e 2 0 ]
+{
+[v i1sprintf@width sprintf `i  1 a 2 21 ]
+[v i1sprintf@len sprintf `ui  1 a 2 19 ]
+[v i1sprintf@cp sprintf `*.26DCCuc  1 a 2 17 ]
+[v i1sprintf@val sprintf `ui  1 a 2 13 ]
+[v i1sprintf@c sprintf `c  1 a 1 23 ]
+[v i1sprintf@ap sprintf `[1]*.4v  1 a 1 16 ]
+[v i1sprintf@prec sprintf `c  1 a 1 15 ]
+[v i1sprintf@flag sprintf `uc  1 a 1 12 ]
+[v i1sprintf@sp sp `*.39uc  1 p 2 0 ]
+[v i1sprintf@f f `*.24DCCuc  1 p 1 2 ]
+"1541
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+[v i1_isdigit isdigit `(b  1 e 0 0 ]
+{
+[v i1isdigit@c c `uc  1 a 1 wreg ]
+[v i1isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v i1isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+{
+[v i1___wmul@product __wmul `ui  1 a 2 4 ]
+[v i1___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v i1___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+[v i1___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+[v i1___lwmod@counter __lwmod `uc  1 a 1 13 ]
+[v i1___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v i1___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+[v i1___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+[v i1___lwdiv@quotient __lwdiv `ui  1 a 2 5 ]
+[v i1___lwdiv@counter __lwdiv `uc  1 a 1 7 ]
+[v i1___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v i1___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"388 D:\PROG\MPLAB X\Datalogger\version_2_virtualwire\PIC16F876A_rx_wireless.X\virtualwire.c
+[v _vw_isr_tmr0 vw_isr_tmr0 `(v  1 e 1 0 ]
+{
+"453
+} 0
+"162
+[v _vw_tx_stop vw_tx_stop `(v  1 e 1 0 ]
+{
+"166
+} 0
+"262
+[v _vw_pll vw_pll `(v  1 e 1 0 ]
+{
+"305
+[v vw_pll@this_byte this_byte `uc  1 a 1 10 ]
+"346
+} 0
+"245
+[v _vw_symbol_6to4 vw_symbol_6to4 `(uc  1 e 1 0 ]
+{
+[v vw_symbol_6to4@symbol symbol `uc  1 a 1 wreg ]
+"247
+[v vw_symbol_6to4@i i `uc  1 a 1 2 ]
+"245
+[v vw_symbol_6to4@symbol symbol `uc  1 a 1 wreg ]
+"250
+[v vw_symbol_6to4@symbol symbol `uc  1 a 1 1 ]
+"255
+} 0

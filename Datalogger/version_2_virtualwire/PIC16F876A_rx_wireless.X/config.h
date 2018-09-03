@@ -1,0 +1,34 @@
+/*
+*   Authors : ACHOURI Ahmed Redouane - ahmed_redouane.achouri@g.enp.edu.dz
+*             BELMEKKI Amir Alaa     - mohamed_amir_alaa.belmekki@g.enp.edu.dz 
+*/
+
+#ifndef CONFIG_H
+#define	CONFIG_H
+
+// CONFIG
+#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config BOREN = ON       // Brown-out Reset Enable bit (BOR enabled)
+#pragma config LVP = OFF        // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+#pragma config CPD = OFF        // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+#pragma config WRT = OFF        // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+#pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+
+#include <xc.h>
+
+#define _XTAL_FREQ 12000000
+#define FOSC _XTAL_FREQ
+
+// Define LCD pins
+#define D4  RB4
+#define D5  RB5
+#define D6  RB6
+#define D7  RB7
+
+#define EN  RB3
+#define RS  RB2
+
+#endif	/* CONFIG_H*/
+
