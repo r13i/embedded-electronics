@@ -1,0 +1,198 @@
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 17776 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 21139 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 19953 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 21139 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 26634 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 26634 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 17776 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 19953 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 6598 ){
+	if( (1000 * short_count) >= 21139 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 19953 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 17776 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 26634 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 26634 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 26634 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 21139 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 22396 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 6598 ){
+	if( (1000 * short_count) >= 19953 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 16778 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 5859 ){
+	if( (1000 * short_count) >= 13317 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 14948 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 2930 ){
+	if( (1000 * short_count) >= 16778 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+while( long_count < 6598 ){
+	if( (1000 * short_count) >= 17776 ){
+			RA1 = ~RA1;	short_count = 0;
+	}
+}
+long_count = 0;
+
+
