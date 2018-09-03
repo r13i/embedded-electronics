@@ -1,0 +1,673 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 12 12 3 2
+config CONFIG 0 2007 2007 1 2
+$dist/default/production\PIC16F876A_wireless.X.production.obj
+cinit CODE 0 15 15 14 2
+text1 CODE 0 512 512 45 2
+text2 CODE 0 3F6 3F6 88 2
+text3 CODE 0 606 606 23 2
+text4 CODE 0 367 367 8F 2
+text5 CODE 0 29 29 132 2
+text6 CODE 0 67B 67B 6 2
+text7 CODE 0 669 669 A 2
+text8 CODE 0 4C8 4C8 4A 2
+text9 CODE 0 15B 15B D6 2
+text10 CODE 0 5D2 5D2 34 2
+text11 CODE 0 557 557 3E 2
+text12 CODE 0 65A 65A F 2
+text13 CODE 0 646 646 14 2
+text14 CODE 0 2D3 2D3 94 2
+text15 CODE 0 681 681 5 2
+text16 CODE 0 231 231 A2 2
+text17 CODE 0 629 629 1D 2
+maintext CODE 0 47E 47E 4A 2
+cstackCOMMON COMMON 1 70 70 D 1
+cstackBANK0 BANK0 1 20 20 34 1
+cstackBANK1 BANK1 1 D0 D0 6 1
+intentry CODE 0 4 4 E 2
+bssBANK0 BANK0 1 54 54 13 1
+bssBANK1 BANK1 1 A0 A0 30 1
+strings STRING 0 595 595 3D 2
+clrtext CODE 0 673 673 8 2
+bssCOMMON COMMON 1 7D 7D 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 67-6F 1
+RAM D6-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 67-6F 1
+BANK1 D6-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-3 2
+CONST 686-1FFF 2
+ENTRY 3-3 2
+ENTRY 686-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-3 2
+CODE 686-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-3 2
+STRCODE 686-1FFF 2
+STRING 3-3 2
+STRING 686-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\PIC16F876A_wireless.X.production.obj
+15 cinit CODE >454:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+15 cinit CODE >457:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+15 cinit CODE >546:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+16 cinit CODE >549:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+17 cinit CODE >550:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+18 cinit CODE >551:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+19 cinit CODE >552:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+1A cinit CODE >553:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+1F cinit CODE >556:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+20 cinit CODE >557:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+21 cinit CODE >558:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+22 cinit CODE >559:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+25 cinit CODE >565:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+25 cinit CODE >567:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+26 cinit CODE >568:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+4 intentry CODE >14:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+629 text17 CODE >245:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+62A text17 CODE >250:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+62F text17 CODE >251:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+63A text17 CODE >252:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+63C text17 CODE >250:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+644 text17 CODE >254:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+231 text16 CODE >262:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+231 text16 CODE >265:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+236 text16 CODE >266:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+23A text16 CODE >268:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+23E text16 CODE >273:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+24C text16 CODE >274:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+250 text16 CODE >275:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+251 text16 CODE >280:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+255 text16 CODE >282:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+259 text16 CODE >286:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+260 text16 CODE >290:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+263 text16 CODE >291:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+264 text16 CODE >293:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+266 text16 CODE >294:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+267 text16 CODE >296:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+26A text16 CODE >300:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+272 text16 CODE >307:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+29A text16 CODE >312:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+29D text16 CODE >317:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2A3 text16 CODE >318:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2AB text16 CODE >321:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2AC text16 CODE >322:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2AD text16 CODE >325:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2B9 text16 CODE >327:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2BF text16 CODE >330:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2C0 text16 CODE >331:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2C4 text16 CODE >333:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2C5 text16 CODE >335:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2C6 text16 CODE >337:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2CD text16 CODE >340:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2CF text16 CODE >341:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D0 text16 CODE >342:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D1 text16 CODE >343:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D2 text16 CODE >345:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+681 text15 CODE >162:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+681 text15 CODE >164:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+684 text15 CODE >165:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+685 text15 CODE >166:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D3 text14 CODE >388:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D3 text14 CODE >390:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2DB text14 CODE >391:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2DC text14 CODE >393:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2E2 text14 CODE >394:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2E6 text14 CODE >398:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2F0 text14 CODE >400:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2F3 text14 CODE >402:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+314 text14 CODE >403:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+318 text14 CODE >405:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+319 text14 CODE >406:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+31D text14 CODE >409:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+321 text14 CODE >412:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+322 text14 CODE >413:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+323 text14 CODE >415:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+324 text14 CODE >422:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+328 text14 CODE >424:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+32D text14 CODE >425:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+333 text14 CODE >426:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+334 text14 CODE >429:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+350 text14 CODE >430:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+354 text14 CODE >432:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+355 text14 CODE >433:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+359 text14 CODE >440:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+35C text14 CODE >441:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+35D text14 CODE >445:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+363 text14 CODE >446:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+646 text13 CODE >14:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+646 text13 CODE >15:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+648 text13 CODE >16:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+64D text13 CODE >17:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+65A text12 CODE >19:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+65A text12 CODE >20:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+557 text11 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+557 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+55B text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+55F text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+561 text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+563 text11 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+56A text11 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+56E text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+56F text11 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+576 text11 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+57E text11 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+584 text11 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+585 text11 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+58C text11 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+590 text11 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+5D2 text10 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5D2 text10 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5D8 text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5DA text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5DC text10 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5E3 text10 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5E7 text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5E8 text10 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5F0 text10 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5F6 text10 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+5FD text10 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+601 text10 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+15B text9 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+15E text9 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+162 text9 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+172 text9 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+176 text9 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+181 text9 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+182 text9 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+183 text9 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+198 text9 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1A4 text9 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1A6 text9 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1AA text9 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1AF text9 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1B5 text9 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1CE text9 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1D6 text9 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1DA text9 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1E5 text9 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1E9 text9 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+1F0 text9 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+220 text9 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+22B text9 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+22C text9 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
+4C8 text8 CODE >51:D:\PROG\MPLAB X\Wireless_433_comm/_libs/crc16.h
+4C8 text8 CODE >53:D:\PROG\MPLAB X\Wireless_433_comm/_libs/crc16.h
+4CE text8 CODE >54:D:\PROG\MPLAB X\Wireless_433_comm/_libs/crc16.h
+4DB text8 CODE >57:D:\PROG\MPLAB X\Wireless_433_comm/_libs/crc16.h
+669 text7 CODE >168:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+669 text7 CODE >170:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+66C text7 CODE >171:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+66D text7 CODE >172:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+66E text7 CODE >174:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+670 text7 CODE >177:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+672 text7 CODE >178:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+67B text6 CODE >157:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+67B text6 CODE >159:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+29 text5 CODE >180:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2C text5 CODE >183:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+2D text5 CODE >184:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+31 text5 CODE >185:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+35 text5 CODE >186:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+3A text5 CODE >188:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+3E text5 CODE >192:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+43 text5 CODE >193:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+46 text5 CODE >196:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+59 text5 CODE >197:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+76 text5 CODE >198:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+8B text5 CODE >202:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+90 text5 CODE >204:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+A8 text5 CODE >205:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+CA text5 CODE >206:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+E4 text5 CODE >202:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+E9 text5 CODE >212:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+EB text5 CODE >213:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+10B text5 CODE >214:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+120 text5 CODE >215:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+13D text5 CODE >216:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+152 text5 CODE >219:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+157 text5 CODE >222:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+367 text4 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+367 text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+36A text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+36C text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+377 text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+379 text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+379 text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+37B text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+386 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+38A text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+392 text4 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+398 text4 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+39A text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+39C text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3A5 text4 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3A9 text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3AA text4 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3B3 text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3C3 text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3D1 text4 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3D2 text4 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3DB text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3DF text4 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3E2 text4 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+3ED text4 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\aldiv.c
+606 text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+606 text3 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+60A text3 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+60C text3 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+612 text3 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+619 text3 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+620 text3 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+624 text3 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+3F6 text2 CODE >97:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+3F6 text2 CODE >103:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+3FD text2 CODE >105:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+416 text2 CODE >106:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+460 text2 CODE >108:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+467 text2 CODE >110:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+46E text2 CODE >111:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+471 text2 CODE >113:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+478 text2 CODE >115:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+479 text2 CODE >103:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+512 text1 CODE >123:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+512 text1 CODE >129:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+515 text1 CODE >130:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+516 text1 CODE >133:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+519 text1 CODE >136:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+52E text1 CODE >138:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+537 text1 CODE >141:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+53D text1 CODE >142:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+545 text1 CODE >145:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+548 text1 CODE >146:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+54E text1 CODE >148:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+54F text1 CODE >149:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+550 text1 CODE >150:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+556 text1 CODE >151:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\virtualwire.c
+47E maintext CODE >23:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+47E maintext CODE >27:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+489 maintext CODE >29:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+48C maintext CODE >36:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+491 maintext CODE >38:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+4A8 maintext CODE >40:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+4B4 maintext CODE >41:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+4BF maintext CODE >36:D:\PROG\MPLAB X\Wireless_433_comm\PIC16F876A_wireless.X\main.c
+673 clrtext CODE >533:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+673 clrtext CODE >534:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+674 clrtext CODE >535:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+674 clrtext CODE >536:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+675 clrtext CODE >537:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+676 clrtext CODE >538:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+677 clrtext CODE >539:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+678 clrtext CODE >540:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+679 clrtext CODE >541:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+67A clrtext CODE >542:C:\Users\peaceful\AppData\Local\Temp\s2i8.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_global_isr C8C 0 CODE 0 text13 dist/default/production\PIC16F876A_wireless.X.production.obj
+___latbits 2 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwmod@counter 31 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_header 62 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Hspace_1 D6 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+_vw_rx_enabled_last 5B 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@buf 39 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@crc 3C 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@len 34 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_active 56 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+?__crc_ccitt_update 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_vw_isr_tmr0 6CE 0 CODE 0 text14 dist/default/production\PIC16F876A_wireless.X.production.obj
+main@j D5 0 BANK1 1 cstackBANK1 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_PEIE 5E 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_T0CS 40D 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_TMR0 1 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+_main 8FC 0 CODE 0 maintext dist/default/production\PIC16F876A_wireless.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__crc_ccitt_update@data 26 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+start 24 0 CODE 0 init C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+__size_of___aldiv 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler@k_tmr0 3D 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+?___wmul 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_stop D02 0 CODE 0 text15 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@i 3B 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@p 3E 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_sample 65 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of__calc_timer0_prescaler@prescaler_factor B5A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler@pindex 48 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_index 63 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_start CD2 0 CODE 0 text7 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_global_isr CB4 0 CODE 0 text13 dist/default/production\PIC16F876A_wireless.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+intlevel1 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+intlevel2 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+intlevel3 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+intlevel4 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+intlevel5 0 0 CODE 0 functab C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+___aldiv@divisor 2A 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+___aldiv@sign 34 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___wmul@multiplicand 26 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of__calc_timer0_prescaler 8FC 0 CODE 0 text2 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_sample 5F 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_send 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of___wmul C52 0 CODE 0 text3 dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler@aux_tmr0 46 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@count 3A 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_send@index 3F 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_tx_stop D0C 0 CODE 0 text15 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_wait_tx 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_last_sample 5D 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwmod@divisor 2C 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of___aldiv 7EC 0 CODE 0 text4 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of___lwdiv B2A 0 CODE 0 text11 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of___lwmod C0C 0 CODE 0 text10 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of__crc_ccitt_update 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+delay@delay 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler@brate 39 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_OPTION_REG 81 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_count 58 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_dpowers B7A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwdiv@quotient 2A 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_delay 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_isr_tmr0 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwmod@dividend 2E 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_pll@this_byte 7A 0 COMMON 1 cstackCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_setup@prescaler_value 4F 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+start_initialization 2A 0 CODE 0 cinit dist/default/production\PIC16F876A_wireless.X.production.obj
+___aldiv@quotient 35 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_buf_header B8E 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_enabled 5A 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_symbol_6to4 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+clear_ram0 CE6 0 CODE 0 clrtext dist/default/production\PIC16F876A_wireless.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__pcstackBANK1 D0 0 BANK1 1 cstackBANK1 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_integrator 5C 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__crc_ccitt_update@crc 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_TMR0IE 5D 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_TMR0IF 5A 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_TRISB3 433 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_TRISB4 434 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_enabled 61 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_send 2B6 0 CODE 0 text5 dist/default/production\PIC16F876A_wireless.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 52 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase B34 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwdiv@counter 29 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_sprintf 462 0 CODE 0 text9 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 0 config -
+__end_of_vw_pll 5A6 0 CODE 0 text16 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit 2A 0 CODE 0 cinit -
+__size_of_global_isr 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+vw_symbol_6to4@symbol 71 0 COMMON 1 cstackCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 24 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 24 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+___wmul C0C 0 CODE 0 text3 dist/default/production\PIC16F876A_wireless.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__calc_timer0_prescaler@prescaler_bits 3C 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_GIE 5F 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_RB3 33 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_RB4 34 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__S0 2008 0 ABS 0 - -
+__S1 D6 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_vw_rx_bits 54 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_done 59 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of__crc_ccitt_update A24 0 CODE 0 text8 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of__calc_timer0_prescaler 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_symbols B7A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+saved_w 7E 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_tx_buf_header B9E 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_tx_start CE6 0 CODE 0 text7 dist/default/production\PIC16F876A_wireless.X.production.obj
+sprintf@val 3B 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_tx_stop 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+__stringtab B2A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+sprintf@flag 39 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+sprintf@prec 3A 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_bit_count 57 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext10 BA4 0 CODE 0 text10 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext11 AAE 0 CODE 0 text11 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext12 CB4 0 CODE 0 text12 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext13 C8C 0 CODE 0 text13 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext14 5A6 0 CODE 0 text14 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext15 D02 0 CODE 0 text15 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext16 462 0 CODE 0 text16 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext17 C52 0 CODE 0 text17 dist/default/production\PIC16F876A_wireless.X.production.obj
+___aldiv 6CE 0 CODE 0 text4 dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwdiv AAE 0 CODE 0 text11 dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwmod BA4 0 CODE 0 text10 dist/default/production\PIC16F876A_wireless.X.production.obj
+__pmaintext 8FC 0 CODE 0 maintext dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_setup 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_isr_tmr0 5A6 0 CODE 0 text14 dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+___wmul@multiplier 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_symbol_6to4@i 72 0 COMMON 1 cstackCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwdiv@divisor 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__crc_ccitt_update 990 0 CODE 0 text8 dist/default/production\PIC16F876A_wireless.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+stacklo 0 0 ABS 0 - C:\Users\peaceful\AppData\Local\Temp\s2i8.obj
+_vw_pll 462 0 CODE 0 text16 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of__stringtab B36 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+main@buffer D0 0 BANK1 1 cstackBANK1 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 7D 0 COMMON 1 bssCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__Lend_init 24 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__calc_timer0_prescaler@prescaler_value 3B 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+end_of_initialization 4A 0 CODE 0 cinit dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hintentry 24 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+?___aldiv 2A 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+___lwdiv@dividend 26 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+?___lwdiv 24 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+?___lwmod 2C 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_send 52 0 CODE 0 text5 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_setup A24 0 CODE 0 text1 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__ptext1 A24 0 CODE 0 text1 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext2 7EC 0 CODE 0 text2 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext3 C0C 0 CODE 0 text3 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext4 6CE 0 CODE 0 text4 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext5 52 0 CODE 0 text5 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext6 CF6 0 CODE 0 text6 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext7 CD2 0 CODE 0 text7 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext8 990 0 CODE 0 text8 dist/default/production\PIC16F876A_wireless.X.production.obj
+__ptext9 2B6 0 CODE 0 text9 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_setup AAE 0 CODE 0 text1 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_pll$138 78 0 COMMON 1 cstackCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+___aldiv@dividend 2E 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_sprintf 2B6 0 CODE 0 text9 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_wait_tx CF6 0 CODE 0 text6 dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_pll 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__size_of_vw_tx_start 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_setup@prescaler_bits 4E 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 38 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+sprintf@sp 3D 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_symbol_6to4 C52 0 CODE 0 text17 dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler@prescaler_factor B36 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tmr0_value 66 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of__initialization 4A 0 CODE 0 cinit dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+_vw_rx_len 7D 0 COMMON 1 bssCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+_symbols B5A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_bit 60 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_buf A0 0 BANK1 1 bssBANK1 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_tx_len 64 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PIC16F876A_wireless.X.production.obj
+__calc_timer0_prescaler 7EC 0 CODE 0 text2 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hend_init 2A 0 CODE 0 end_init -
+___aldiv@counter 33 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+sprintf@c 3E 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+sprintf@f 32 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_main 990 0 CODE 0 maintext dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_dpowers B8E 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_delay CD2 0 CODE 0 text12 dist/default/production\PIC16F876A_wireless.X.production.obj
+?_sprintf 32 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+_vw_rx_pll_ramp 5E 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__end_of_vw_wait_tx D02 0 CODE 0 text6 dist/default/production\PIC16F876A_wireless.X.production.obj
+__Lram 0 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production\PIC16F876A_wireless.X.production.obj
+_delay CB4 0 CODE 0 text12 dist/default/production\PIC16F876A_wireless.X.production.obj
+__end_of_vw_symbol_6to4 C8C 0 CODE 0 text17 dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\PIC16F876A_wireless.X.production.obj
+__initialization 2A 0 CODE 0 cinit dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__pbssBANK0 54 0 BANK0 1 bssBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\PIC16F876A_wireless.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\PIC16F876A_wireless.X.production.obj
+__pstrings B2A 0 STRING 0 strings dist/default/production\PIC16F876A_wireless.X.production.obj
+___wmul@product 28 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+vw_setup@brate 49 0 BANK0 1 cstackBANK0 dist/default/production\PIC16F876A_wireless.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text10 0 5D2 BA4 B4 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 47 1
+intentry 0 4 8 591 2
+reset_vec 0 0 0 3 2
+bssBANK1 1 A0 A0 36 1
+strings 0 595 B2A 3D 2
+config 0 2007 400E 1 2
